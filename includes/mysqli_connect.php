@@ -3,13 +3,23 @@
 // This file contains the database access information. 
 // This file also establishes a connection to MySQL 
 // and selects the database.
+$host ="localhost";
+$user ="root";
+$pass ="";
+$database = "dja";
 
-DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PASSWORD', '');
-DEFINE ('DB_HOST', 'localhost');
-DEFINE ('DB_NAME', 'dja');
+// variables.php
+$conn = new mysqli($host, $user, $pass, $database);
 
-// Make the connection:
-$conn = @mysqli_connect (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) OR die ('Could not connect to MySQL: ' . mysqli_connect_error() );
+/* check connection */
+if ($conn->connect_errno) {
+    printf("Connect failed: %s\n", $connect->connect_error);
+    exit();
+}
+
+global $conn;
+
+$conn->set_charset('utf8');
+
 
 ?>
