@@ -9,17 +9,16 @@ $pass ="";
 $database = "dja";
 
 // variables.php
-$conn = new mysqli($host, $user, $pass, $database);
+$conn = mysqli_connect($host, $user, $pass, $database);
 
 /* check connection */
-if ($conn->connect_errno) {
-    printf("Connect failed: %s\n", $connect->connect_error);
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 }
 
 global $conn;
 
 $conn->set_charset('utf8');
-
 
 ?>

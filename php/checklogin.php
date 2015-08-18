@@ -5,22 +5,23 @@ include ('../includes/header.html');
 $myemail=$_POST['myemail']; 
 $mypassword=$_POST['mypassword']; 
 
-$sql="SELECT * FROM users WHERE email='$myemail' and password='$mypassword' and actief='Actief'";
-$result=mysql_query($sql);
+$resultSet = $mysqli->query("SELECT * FROM `users` WHERE `email` = '$myemail' AND `password` = '$mypassword'");
 
-// Mysql_num_row is counting table row
-$count=mysql_num_rows($result);
+// Count the returned rows
+if($resultSet->num_rows = 1){
 
-// If result matched $myemail and $mypassword, table row must be 1 row
-if($count==1){
+	$_SESSION['myemail'] = ("$myemail");
+	$_SESSION['mypassword'] = ("$mypassword");
+	echo "succes";
+	session_write_close();
+	header("location:http://localhost/dja/myAccount.php");
+	exit(0);
 
-// Register $myemail, $mypassword and redirect to file "login_success.php"
-$_SESSION['myemail'] = ("$myemail");
-$_SESSION['mypassword'] = ("$mypassword");
-session_write_close();
-header("location:http://localhost/dja/myAccount.php");
-exit(0);
 }else {
-	echo "Email en Wachtwoord combinatie is niet correct of uw account is nog niet actief.";
+	echo "Email en Wachtwoord combinatie is niet correct of uw account is nog niet actief.";	
 }
+
+    /* free result set */
+    mysqli_free_result($resultSet);
+
 ?>
