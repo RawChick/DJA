@@ -12,13 +12,51 @@ include ('includes/header.html');
 					</header>
 					
 					<content>
-						<p>"Lorem ipsum dolor sit amet, </br>consectetur adipiscing elit, </br>
-							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</br>
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </br>
-							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </br>
-							reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </br>
-							Excepteur sint occaecat cupidatat non proident, </br>
-							sunt in culpa qui officia deserunt mollit anim id est laborum."<br></p>
+						<h4><a name="boven" id="boven"></a>Atletiekverenigingen in de regio.</h4>
+      <p>DJA behoort tot de ARWB. De ARWB is een samenwerkingsverband van 12 atletiekverenigingen en </br>5 buitengewonen leden in West-Brabant (<a href="http://www.regio12.nl">regio 12</a>), die allen zijn aangesloten bij de Atletiek Unie (AU).<br />
+        </br>Hieronder de betreffende verenigingen:
+      </p>
+      <ul>
+        <li><a href="http://www.olympia-halsteren.nl" target="_blank">AC Olympia, Halsteren</a></li>
+        <li><a href="http://www.arvachilles.nl" target="_blank">ARV Achilles, Etten-Leur</a></li>
+        <li><a href="http://www.avgroenester.nl" target="_blank">AV Groene Ster, Zevenbergen</a></li>
+        <li><a href="http://www.avr90.nl" target="_blank">AVR '90, Rucphen</a></li>
+        <li><a href="http://www.avs90.nl" target="_blank">AVS '90, Standdaarbuiten</a></li>
+        <li><a href="http://www.avo83.nl" target="_blank">AVO '83, Oudenbosch</a></li>
+        <li><a href="http://www.spado.nl" target="_blank">Spado, Bergen op Zoom</a></li>
+        <li><a href="http://www.diomedon.nl" target="_blank">SV Diomedon, Steenbergen</a></li>
+        <li><a href="http://www.thor-roosendaal.nl" target="_blank">Thor, Roosendaal</a></li>
+        <li><a href="http://www.ltvelocitas.nl" target="_blank">LTV, Etten-Leur</a></li>
+        <li><a href="http://www.rrel.nl" target="_blank">RREL, Etten-Leur</a></li>
+      </ul></br>
+      <ul>
+        <li><a href="http://www.bredasesingelloop.nl" target="_blank">Bredase singelloop, Breda</a></li>
+        <li><a href="http://www.haagsebeemdenloop.nl" target="_blank">Haagse Beemdenloop, Breda</a></li>
+        <li><a href="http://www.marathonbrabant.nl" target="_blank">Marathon Brabant, Etten-Leur</a></li>
+        <li><a href="http://www.terheijdenloop.nl" target="_blank">Terheijdenloop, Terheijden</a></li>
+      </ul></br>
+      <h3><p>Wedstrijden in de regio:</p></h3>
+      <ul>
+        <li><a href="http://www.vangoghloopzundert.nl" target="_blank">Van Goghloop, Zundert</a></li>
+        <li><a href="http://www.bavoloop.nl" target="_blank">Bavoloop, Rijsbergen</a></li>
+        <li><a href="http://www.vvschijf.nl/site/index.php?id=54,599,0,0,1,0" target="_blank">Schijfse Turfloop, Schijf</a></li>
+        <li><a href="http://www.wbtv.nl/index.php?option=com_content&amp;view=article&amp;id=4&amp;Itemid=12" target="_blank">Rondje Sprundel, Sprundel</a></li>
+        <li><a href="http://www.hoevensepolderloop.nl">Hoevense Polderloop, Hoeven</a></li>
+      </ul></br>
+
+<h3><p>Diverse links:</p></h3>
+      <ul>
+        <li><a href="http://www.atletiekunie.nl/index.php?page=3964">(inter)nationale kalender 2015 AU</a></li>
+        <li><a href="http://www.atletiekunie.nl" target="_blank">Atletiek Unie</a></li>
+        <li><a href="http://www.uitslagen.nl" target="_blank">Uitslagen</a></li>
+        <li><a href="http://www.dehardloopkrant.com" target="_blank">Hardloopkrant</a></li>
+        <li><a href="http://www.dehardloopkrant.com/inschrijven.php" target="_blank">Inschrijven voor diverse wedstrijden</a></li>
+        <li><a href="http://www.afstandmeten.nl" target="_blank">www.afstandmeten.nl</a></li>
+        <li><a href="http://www.atletiek.pagina.nl/" target="_blank">www.atletiek.pagina.nl</a></li>
+        <li><a href="http://www.atletiekverenigingen.pagina.nl" target="_blank">www.atletiekverenigingen.pagina.nl</a></li>
+        <li><a href="http://www.tashi-delek.org" target="_blank">www.tashi-delek.org</a></li>
+      </ul></br>
+  </p>
 
 					</content>
 				</article>

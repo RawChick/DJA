@@ -12,13 +12,10 @@ include ('includes/header.html');
 					</header>
 					
 					<content>
-						<p>"Lorem ipsum dolor sit amet, </br>consectetur adipiscing elit, </br>
-							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</br>
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </br>
-							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </br>
-							reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </br>
-							Excepteur sint occaecat cupidatat non proident, </br>
-							sunt in culpa qui officia deserunt mollit anim id est laborum."<br></p>
+						<p><img src="images/sponsorbord1.jpg" width="640" height="401" title="sponsorbord" /></p>
+      <p><img src="images/sponsorbord2.jpg" width="640" height="480" title="sponsorbord" /></p>
+      <p>&nbsp;</p>
+      <p><img src="images/sponsors_image002.jpg" alt="" width="190" height="110" /><img src="images/desnep.jpg" alt="" width="220" height="110" /><img src="images/rabobank.jpg" width="144" height="149" title="rabobank" /><img src="images/kevenaar.jpg" width="180" height="114" title="kevenaar" /></p>
 
 					</content>
 				</article>

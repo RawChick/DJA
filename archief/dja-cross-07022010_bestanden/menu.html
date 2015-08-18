@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Welcome to Adobe GoLive 4</TITLE>
+<STYLE fprolloverstyle>A {
+	TEXT-DECORATION: none
+}
+</STYLE>
+
+<META content=text/html;charset=iso-8859-1 http-equiv=content-type>
+<META name=GENERATOR content="MSHTML 9.00.8112.16450">
+<META name=ProgId content=FrontPage.Editor.Document><CSSCRIPTDICT>
+<SCRIPT><!--
+CSStopExecution = false;
+CSInit = new Array;
+function CSScriptInit() {
+if(typeof(skipPage) != "undefined") { if(skipPage) return; }
+idxArray = new Array;
+for(var i=0;i<CSInit.length;i++)
+	idxArray[i] = i;
+CSAction2(CSInit, idxArray);
+}
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { return CSFindElement(s,0); }
+function CSFindElement(n,ly) { if (CSBVers < 4) return document[n];
+	var curDoc = ly ? ly.document : document; var elem = curDoc[n];
+	if (!elem) { for (var i=0;i<curDoc.layers.length;i++) {
+		elem = CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+function CSClickReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return true; // dont follow link
+	else return false; // dont follow link
+}
+function CSButtonReturn () {
+	var bAgent = window.navigator.userAgent; 
+	var bAppName = window.navigator.appName;
+	if ((bAppName.indexOf("Explorer") >= 0) && (bAgent.indexOf("Mozilla/3") >= 0) && (bAgent.indexOf("Mac") >= 0))
+		return false; // follow link
+	else return true; // follow link
+}
+CSIm = new Object();
+function CSIShow(n,i) {
+	if (document.images) {
+		if (CSIm[n]) {
+			var img = (!IsIE()) ? CSFindElement(n,0) : document[n];
+			if (img && typeof(CSIm[n][i].src) != "undefined") {img.src = CSIm[n][i].src;}
+			if(i != 0)
+				self.status = CSIm[n][3];
+			else
+				self.status = " ";
+			return true;
+		}
+	}
+	return false;
+}
+function CSILoad(action) {
+	im = action[1];
+	if (document.images) {
+		CSIm[im] = new Object();
+		for (var i=2;i<5;i++) {
+			if (action[i] != '') { CSIm[im][i-2] = new Image(); CSIm[im][i-2].src = action[i]; }
+			else CSIm[im][i-2] = 0;
+		}
+		CSIm[im][3] = action[5];
+	}
+}
+CSStopExecution = false;
+
+function CSAction(array) { 
+	return CSAction2(CSAct, array);
+}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var actArray = fct[array[i]];
+		if(actArray == null) return false; 
+		var tempArray = new Array;
+		for(var j=1;j<actArray.length;j++) {
+			if((actArray[j] != null) && (typeof(actArray[j]) == "object") && (actArray[j].length == 2)) {
+				if(actArray[j][0] == "VAR") {
+					tempArray[j] = CSStateArray[actArray[j][1]];
+				}
+				else {
+					if(actArray[j][0] == "ACT") {
+						tempArray[j] = CSAction(new Array(new String(actArray[j][1])));
+					}
+				else
+					tempArray[j] = actArray[j];
+				}
+			}
+			else
+				tempArray[j] = actArray[j];
+		}			
+		result = actArray[0](tempArray);
+	}
+	return result;
+}
+CSAct = new Object;
+
+// --></SCRIPT>
+</CSSCRIPTDICT><CSACTIONDICT>
+<SCRIPT><!--
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button',/*URL*/'images/k_organisatie_groen.gif',/*URL*/'images/k_organisatie_oranje.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button2',/*URL*/'images/k_algemene_groen.gif',/*URL*/'images/k_algemene_oranje.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button3',/*URL*/'images/k_actualiteit_groen.gif',/*URL*/'images/k_actualiteit_oranje.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button4',/*URL*/'images/k_aktiviteit_groen.gif',/*URL*/'images/k_aktiviteit_oranje.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button6',/*URL*/'images/k_uitslagen_groen.gif',/*URL*/'images/k_uitslagen_oranje.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button5',/*URL*/'images/k_wedstrijdk_groen.gif',/*URL*/'images/k_wedstrijdk_oranje.gif',/*URL*/'','');
+CSInit[CSInit.length] = new Array(CSILoad,/*CMP*/'Button7',/*URL*/'images/k_links_groen.gif',/*URL*/'images/k_links_oranje.gif',/*URL*/'','');
+
+// --></SCRIPT>
+</CSACTIONDICT><LINK rel=styleSheet type=text/css href="ssc/css.css">
+<STYLE type=text/css>#layer {
+	POSITION: absolute; WIDTH: 200px; HEIGHT: 641px; VISIBILITY: visible; TOP: 0px; LEFT: 0px
+}
+</STYLE>
+</HEAD>
+<BODY onload=CSScriptInit(); class=achtergrond bgColor=white>
+<DIV style="WIDTH: 112px; HEIGHT: 1030px" id=layer>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width=192>
+  <TBODY>
+  <TR>
+    <TD vAlign=top align=left><IMG src="menu_bestanden/menu1.gif" width=192 
+      height=193> </TD></TR>
+  <TR>
+    <TD vAlign=top align=left>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width=192>
+        <TBODY>
+        <TR height=40>
+          <TD height=40 width=97><IMG src="menu_bestanden/menu2.gif" width=94 
+            height=40> </TD>
+          <TD height=40 vAlign=top align=left><B><FONT color=#008000 size=2 
+            face=Arial><A style="COLOR: #008000; FONT-WEIGHT: bold" 
+            href="file:///F:/www/Algemeen/tekstorganisatie.html" 
+            target=ronder>Organisatie</A> </FONT></B>
+            <TABLE border=0 width="100%">
+              <TBODY>
+              <TR>
+                <TD borderColorLight=#ffffff width="100%" 
+                borderColorDark=#ffffff><A 
+                  style="FONT-FAMILY: Arial; COLOR: #008000; FONT-SIZE: 8pt; FONT-WEIGHT: bold" 
+                  href="file:///F:/www/Algemeen/fotos/het_bestuur.htm">Wie is 
+                  wie?</A> </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=top align=left>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width=194>
+        <TBODY>
+        <TR height=39>
+          <TD height=39 width=83><IMG src="menu_bestanden/menu3.gif" width=83 
+            height=39> </TD>
+          <TD height=39 vAlign=top width=107 align=left>
+            <P align=center><B><A 
+            style="FONT-FAMILY: Arial; COLOR: #008000; FONT-WEIGHT: bold" 
+            href="file:///F:/www/Algemeen/tekstalgemen.html" target=ronder><FONT 
+            size=2 face=Arial>DJA-info</FONT> 
+  </A></B></P></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=top align=left>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width=192>
+        <TBODY>
+        <TR height=39>
+          <TD height=39 width=78><IMG src="menu_bestanden/menu4.gif" width=78 
+            height=39> </TD>
+          <TD height=39 vAlign=top align=left>
+            <P style="LINE-HEIGHT: 100%; MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" 
+            align=center><FONT size=2><B><A 
+            style="FONT-FAMILY: Arial; COLOR: #008000; FONT-WEIGHT: bold" 
+            href="file:///F:/www/Algemeen/tekstaktiviteitenkal.html" 
+            target=ronder>DJA-kalender</A> <A 
+            style="FONT-FAMILY: Arial; COLOR: #008000; FONT-WEIGHT: bold">&nbsp;</A> 
+            </B></FONT></P></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=top align=left>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width=192>
+        <TBODY>
+        <TR height=38>
+          <TD height=38 width=74><IMG src="menu_bestanden/menu5.gif" width=74 
+            height=38> </TD>
+          <TD height=38 vAlign=top align=left>
+            <P align=center><FONT size=2 face=Arial><A 
+            style="FONT-FAMILY: Arial; COLOR: #008000; FONT-WEIGHT: bold" 
+            href="file:///F:/www/Algemeen/tekstwedstijdkal.html" 
+            target=ronder>DJA-wedstrijden</A> 
+  </FONT></P></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=top align=left>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width=192>
+        <TBODY>
+        <TR height=39>
+          <TD height=39 width=71><IMG src="menu_bestanden/menu6.gif" width=70 
+            height=39> </TD>
+          <TD height=39 vAlign=top align=left>
+            <P align=center><FONT size=2><A 
+            style="FONT-FAMILY: Arial; COLOR: #008000; FONT-WEIGHT: bold" 
+            href="file:///F:/www/Algemeen/de_atletiek_accommodatie.htm" 
+            target=ronder>Accommodatie</A> </FONT></P></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=top align=left>
+      <TABLE border=0 cellSpacing=0 cellPadding=0 width=192>
+        <TBODY>
+        <TR height=39>
+          <TD height=39 width=71><IMG src="menu_bestanden/menu7.gif" width=70 
+            height=39> </TD>
+          <TD height=39 vAlign=top align=left>
+            <P align=center><B><FONT color=#008000 face=Arial><A 
+            style="COLOR: #008000" 
+            href="file:///F:/www/Algemeen/DJA50/dja50.htm">DJA 50 
+            jaar</A></FONT></B> </P></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD vAlign=top align=left>
+      <TABLE border=0 cellSpacing=0 borderColorLight=#ffffff 
+      borderColorDark=#ffffff cellPadding=0 width=71 height=283>
+        <TBODY>
+        <TR height=20>
+          <TD height=1 background=menu_bestanden/achtergrond.gif 
+            width=78>&nbsp; </TD>
+          <TD height=1 vAlign=top width=48 align=left>
+            <P align=left><A href="mailto:pr@dja-zundert.nl"><IMG 
+            style="FLOAT: left" border=0 src="menu_bestanden/b.gif" width=16 
+            height=16></A> </P></TD></TR>
+        <TR height=20>
+          <TD height=1 background=menu_bestanden/achtergrond.gif 
+            width=78>&nbsp; </TD>
+          <TD height=1 vAlign=top width=48 align=left>
+            <P align=center></P></TD></TR>
+        <TR height=20>
+          <TD height=464 background=menu_bestanden/achtergrond.gif 
+            width=78><IMG src="menu_bestanden/menu7.gif" width=70 height=39> </TD>
+          <TD height=464 borderColorLight=#ffffff vAlign=top borderColor=#ffffff 
+          width=48 borderColorDark=#ffffff 
+  align=left></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV></BODY></HTML>
