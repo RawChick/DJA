@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 4.4.12
 -- http://www.phpmyadmin.net
 --
--- Machine: 127.0.0.1
--- Gegenereerd op: 18 aug 2015 om 12:33
--- Serverversie: 5.6.21
--- PHP-versie: 5.6.3
+-- Host: 127.0.0.1
+-- Gegenereerd op: 18 aug 2015 om 14:35
+-- Serverversie: 5.6.25
+-- PHP-versie: 5.6.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,10 +14,10 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Databank: `dja`
+-- Database: `dja`
 --
 
 -- --------------------------------------------------------
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `afbeelding` (
-`image_id` int(11) NOT NULL,
+  `image_id` int(11) NOT NULL,
   `image_content` mediumblob NOT NULL,
   `image_name` varchar(30) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
@@ -46,7 +46,7 @@ INSERT INTO `afbeelding` (`image_id`, `image_content`, `image_name`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `agenda` (
-`ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL,
   `activity` varchar(255) NOT NULL,
   `begindate` date NOT NULL,
   `enddate` date DEFAULT NULL
@@ -478,7 +478,7 @@ INSERT INTO `birthday` (`firstname`, `lastname`, `dateofbirth`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `paths` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `paths` varchar(200) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
@@ -490,6 +490,29 @@ INSERT INTO `paths` (`id`, `paths`) VALUES
 (1, ''),
 (2, '????\0JFIF\0\0\0\0\0\0??\0;CREATOR: gd-jpeg v1.0 (using IJG JPEG v90), quality = 80\n??\0C\0\n\n\n		\n\Z%\Z# , #&'')*)-0-(0%()(??\0C\n\n\n\n(\Z\Z(((((((((((((((((((((((((((((((');
 
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL,
+  `email` varchar(48) NOT NULL,
+  `password` varchar(48) NOT NULL,
+  `function` enum('Trainer','Admin','LedenAdministratie','ClubRecords','SponsorCommisie','Bestuur') NOT NULL,
+  `actief` enum('Actief','Non-Actief') NOT NULL DEFAULT 'Non-Actief',
+  `firstname` varchar(48) NOT NULL,
+  `lastname` varchar(48) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `password`, `function`, `actief`, `firstname`, `lastname`) VALUES
+(3, 'jobse.ricardo@gmail.com', 'appelsap', 'Trainer', 'Actief', 'Ricardo', 'Jobse');
+
 --
 -- Indexen voor geëxporteerde tabellen
 --
@@ -498,25 +521,31 @@ INSERT INTO `paths` (`id`, `paths`) VALUES
 -- Indexen voor tabel `afbeelding`
 --
 ALTER TABLE `afbeelding`
- ADD PRIMARY KEY (`image_id`);
+  ADD PRIMARY KEY (`image_id`);
 
 --
 -- Indexen voor tabel `agenda`
 --
 ALTER TABLE `agenda`
- ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexen voor tabel `birthday`
 --
 ALTER TABLE `birthday`
- ADD PRIMARY KEY (`firstname`,`lastname`);
+  ADD PRIMARY KEY (`firstname`,`lastname`);
 
 --
 -- Indexen voor tabel `paths`
 --
 ALTER TABLE `paths`
- ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexen voor tabel `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT voor geëxporteerde tabellen
@@ -526,17 +555,22 @@ ALTER TABLE `paths`
 -- AUTO_INCREMENT voor een tabel `afbeelding`
 --
 ALTER TABLE `afbeelding`
-MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT voor een tabel `agenda`
 --
 ALTER TABLE `agenda`
-MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT voor een tabel `paths`
 --
 ALTER TABLE `paths`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT voor een tabel `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
