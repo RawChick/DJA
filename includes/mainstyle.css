@@ -273,10 +273,10 @@ table  {
 border-collapse:collapse;
 border-spacing:0;
 
-
 border-color: #222222;
 border-style:solid;
 border-width: 1px;
+
 }
 
 td {
@@ -305,6 +305,11 @@ padding:10px 20px;
 overflow:hidden;
 background-color: #4FA968;
 color:#FFFFFF;
+}
+
+#bestuurtable td{
+border-collapse: collapse;
+border: none;
 }
 
 .linkfoto {
@@ -356,6 +361,10 @@ float: left;
 padding-top: 3px;
 padding-left: 20px;
 
+}
+
+.bestuurtable table {
+border-collapse: collapse;
 }
 
 

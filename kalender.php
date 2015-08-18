@@ -12,13 +12,16 @@ include ('includes/header.html');
 					</header>
 					
 					<content>
-						<p>"Lorem ipsum dolor sit amet, </br>consectetur adipiscing elit, </br>
-							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</br>
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </br>
-							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </br>
-							reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </br>
-							Excepteur sint occaecat cupidatat non proident, </br>
-							sunt in culpa qui officia deserunt mollit anim id est laborum."<br></p>
+						<p>
+							Bekijk <a href="https://www.youtube.com/watch?v=qR7_Z-JLbWw&feature=youtu.be"><b>hier</b></a> een filmimpressie Diomedoncross in Steenbergen, 02-11-2014</br>
+Bekijk <a href="https://www.youtube.com/watch?v=ipzBowaHffU"><b>hier</b></a> een filmpje over hoe het er aan toe gaat bij een wedstrijd.</br>
+</br>
+Klik <a href="http://www.regio12.nl/Weg/cross_comp_alg.php"><b>hier</b></a> voor de crossen van 2014-2015.</br>
+</br>
+Klik <a href="pdf/Winterkalender%202014-2015.pdf"><b>hier</b></a> voor de wedstrijdkalender voor Junioren en Senioren, winter 2014/2015</br>
+</br>
+Klik <a href="pdf/Wedstrijdkalender%20pupillen%20winterseizoen%202014%20-%202015.pdf"><b>hier</b></a> voor de wedstrijdkalender voor pupillen winter 2014/2015</br>
+</p>
 
 					</content>
 				</article>

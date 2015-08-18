@@ -25,6 +25,9 @@ Bestand:
 // Variable file waarin de geuploaden afbeelding informatie wordt opgeslagen
 
 $upload_image = $_FILES['image']['name'];
+
+if(isset($upload_image)){
+
 $folder = "/xampp/htdocs/DJA/images/uploads/";
 
 move_uploaded_file($_FILES['image']['tmp_name'], "$folder".$_FILES['image']['name']);
@@ -96,6 +99,7 @@ echo "<br><br><b>image geupload</b>";
 }else{ 
 echo "<br><br>fout met uploaden"; } 
 
+};
 ?>
 
 					</content>

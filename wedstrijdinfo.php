@@ -12,13 +12,15 @@ include ('includes/header.html');
 					</header>
 					
 					<content>
-						<p>"Lorem ipsum dolor sit amet, </br>consectetur adipiscing elit, </br>
-							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</br>
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </br>
-							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </br>
-							reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </br>
-							Excepteur sint occaecat cupidatat non proident, </br>
-							sunt in culpa qui officia deserunt mollit anim id est laborum."<br></p>
+<h3>Algemene regels</h3>
+<ul>
+<li>Opgeven kan via je train(st)er. De vetgedrukte wedstrijden zijn met begeleiding. Let op dat je op tijd inschrijft, graag minimaal 2 weken voor wedstrijddatum.</li>
+<li>Informatie zoals vertrektijden, laatste wijzigingen e.d. zijn te vinden op deze site en zijn op te vragen bij je train(st)er. </li>
+<li>Clubkleding wordt tijdens iedere wedstrijd verwacht. </li>
+<li>Vertrektijden vanaf DJA accommodatie zijn te vinden op de site of bij je trainer. Meerijdkosten afspreken met de chauffeur (gebruikelijk € 2,50 retour). </li>
+<li>Bij zelf vertrekken (niet verzamelen bij accommodatie), dit duidelijk aangeven aan je train(st)er! </li>
+<li>Aanspreekpunt voor de winterwedstrijden is Ronald Cockx; Klik <a href="mailto:ronald_cockx@live.nl"><b>hier</b></a> om te mailen of bel naar 0615222101</li>
+</ul>
 
 					</content>
 				</article>
