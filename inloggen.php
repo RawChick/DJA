@@ -1,27 +1,38 @@
 <?php	
 
-include ('includes/header.html');
+	include ('includes/header.html');
+
+	if(isset($_SESSION["user"])){
+		session_write_close();
+			header("location:myAccount.php");
+			exit(0);
+	}
 
 ?>
 
 <div class= "bottomcontent">
 
-				<article class="mainbar">	
-					<header>
-						<h2><b>Nieuws</b></h2>
-					</header>
-					
-					<content>
-						<p>"Lorem ipsum dolor sit amet, </br>consectetur adipiscing elit, </br>
-							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</br>
-							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </br>
-							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </br>
-							reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </br>
-							Excepteur sint occaecat cupidatat non proident, </br>
-							sunt in culpa qui officia deserunt mollit anim id est laborum."<br></p>
+	<article class="mainbar">	
+		<header>
+			<h2><b>Inloggen</b></h2>
+		</header>
+			
+		<content>
+			<form name="form1" method="post" action="php/checklogin.php">
 
-					</content>
-				</article>
+				<label>E-mail </label>
+				<input name="myemail" type="text" id="myemail"> <br />
+
+				<label>Wachtwoord</label>
+				<input name="mypassword" type="password" id="mypassword"> <br />
+
+				<input type="submit" name="Submit" value="Login" class="btn btn-confirm">
+			</form>
+			<hr />
+			<label>Nog geen account?</label> <br />
+			<a href="register.php"><button class="btn btn-confirm" type="button">Registreren</button></a>
+		</content>
+	</article>
 					
 </div>
 
