@@ -5,7 +5,7 @@ include ('../includes/header.html');
 $myemail=$_POST['myemail']; 
 $mypassword=$_POST['mypassword']; 
 
-$resultSet = $mysqli->query("SELECT * FROM `users` WHERE `email` = '$myemail' AND `password` = '$mypassword'");
+$resultSet = $mysqli->query("SELECT * FROM `users` WHERE `email` = '$myemail' AND `password` = '$mypassword' AND `actief` = 'Actief'");
 
 // Count the returned rows
 if($resultSet->num_rows = 1){

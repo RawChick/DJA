@@ -5,6 +5,7 @@ session_start();
 
 include ('includes/header.html');
 include ('includes/slideshowfunction.php');
+include ('php/connection.php');
 
 ?>
 
@@ -29,12 +30,11 @@ include ('includes/slideshowfunction.php');
 				<aside class="top-sidebar">
 					<article>
 
-<?php 
-$resultSet = $mysqli->query("SELECT * FROM agenda WHERE `begindate` > SUBDATE(NOW(),1) OR `enddate` > SUBDATE(NOW(),1) ORDER BY `begindate` LIMIT 3;");
-//$sql = "SELECT * FROM agenda WHERE `begindate` > SUBDATE(NOW(),1) OR `enddate` > SUBDATE(NOW(),1) ORDER BY `begindate` LIMIT 3;";
+<?php
 
-
-//$result = mysqli_query($conn, $sql);
+$link = mysqli_connect($host, $user, $password, $database);
+$query = "SELECT * FROM `agenda` WHERE `begindate` > SUBDATE(NOW(),1) OR `enddate` > SUBDATE(NOW(),1) ORDER BY `begindate` LIMIT 3";
+$result = mysqli_query($link, $query);
 
 ?>
 
@@ -44,7 +44,9 @@ $resultSet = $mysqli->query("SELECT * FROM agenda WHERE `begindate` > SUBDATE(NO
     <th width="150px"></th>
   </tr>
   <?php
-while($row = mysqli_fetch_array($resultSet, MYSQLI_ASSOC)) 
+
+while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) 
+
 { 
 $time = strtotime($row["begindate"]);
 $myDate = date($time );
