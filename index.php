@@ -14,10 +14,15 @@ include ('includes/slideshowfunction.php');
 
 				<article class="topbar">	
 <a href="fotoalbum.php">
-<img src="images/slideshow/1367668683.jpg" name="SlideShow" alt="" border="0" width="100%" />
+<img src="images/slideshow/1367668683.jpg" name="SlideShow" alt="" border="0" width="400" height="300" />
 </a>	
 				</article>
 
+<aside class="top-centerbar">
+	<article>
+		hallo.
+	</article>
+</aside>
 			
 	
 			
@@ -39,7 +44,7 @@ $resultSet = $mysqli->query("SELECT * FROM agenda WHERE `begindate` > SUBDATE(NO
     <th width="150px"></th>
   </tr>
   <?php
-while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) 
+while($row = mysqli_fetch_array($resultSet, MYSQLI_ASSOC)) 
 { 
 $time = strtotime($row["begindate"]);
 $myDate = date($time );

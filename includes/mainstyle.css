@@ -216,9 +216,12 @@ input[type=checkbox]:checked ~ #menu{
 .topbar {
 	opacity: 0.85;
 	float: left;
-	width: 50%;
-	height: 218px;
+	width: 400px;
+	height: 300px;
 	margin: 15px 10px 5px 0;
+border-color: #222222;
+border-style:solid;
+border-width: 1px;
 }
 
 .bottomcontent {
@@ -260,14 +263,27 @@ display:none;
    =========================== */
 
 .top-sidebar {
-	width: 45%;
+	width: 40%;
 	height: 50%;
 	float: right;
 	margin-left: 1%;
 	background-color: #FBFBFB;
 	margin: 15px 0 5px 0;
+border-color: #222222;
+border-style:solid;
+border-width: 1px;
 }
 
+.top-centerbar {
+	width: 20%;
+	height: 50%;
+	margin: auto;
+	background-color: #FBFBFB;
+
+border-color: #222222;
+border-style:solid;
+border-width: 1px;
+}
 
 table  {
 border-collapse:collapse;

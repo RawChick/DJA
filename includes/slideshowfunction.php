@@ -10,12 +10,12 @@ var Pic = new Array();
 // the pattern, adding to the array below
 
 Pic[0] = 'images/slideshow/1367668683.jpg'
-Pic[1] = 'images/slideshow/1367668726.jpg'
+Pic[6] = 'images/slideshow/1367668726.jpg'
 Pic[2] = 'images/slideshow/1367668751.jpg'
 Pic[3] = 'images/slideshow/1367668765.jpg'
 Pic[4] = 'images/slideshow/1367668777.jpg'
 Pic[5] = 'images/slideshow/1367669498.jpg'
-
+Pic[1] = 'images/slideshow/seta-de-mario-bros.jpg'
 
 
 // do not edit anything below this line

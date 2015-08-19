@@ -304,7 +304,7 @@ include ('includes/header.html');
           <tr>
             <td>Automatische incasso*</td>
             <td><label>
-<input type="checkbox" name="incasso" value="incasso" checked="checked">
+<input type="checkbox" name="incasso" checked="checked">
             </label>
               Hierbij geef ik toestemming om de <a href="contributie.php">contributie</a> automatisch te incasseren.<br />
               Ter bevestiging zal ik het <a href="pdf/machtigingsformulier.pdf">machtigingsformulier downloaden</a>, invullen, ondertekenen en afgeven bij mijn trainer of bij de ledenadministratie, Erik Klein, Akkermolenweg 15, 4882 BL  Zundert </td>
