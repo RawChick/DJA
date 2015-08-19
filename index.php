@@ -25,11 +25,11 @@ include ('includes/slideshowfunction.php');
 					<article>
 
 <?php 
+$resultSet = $mysqli->query("SELECT * FROM agenda WHERE `begindate` > SUBDATE(NOW(),1) OR `enddate` > SUBDATE(NOW(),1) ORDER BY `begindate` LIMIT 3;");
+//$sql = "SELECT * FROM agenda WHERE `begindate` > SUBDATE(NOW(),1) OR `enddate` > SUBDATE(NOW(),1) ORDER BY `begindate` LIMIT 3;";
 
-$sql = "SELECT * FROM agenda WHERE `begindate` > SUBDATE(NOW(),1) OR `enddate` > SUBDATE(NOW(),1) ORDER BY `begindate` LIMIT 3;";
 
-
-$result = mysqli_query($conn, $sql);
+//$result = mysqli_query($conn, $sql);
 
 ?>
 
