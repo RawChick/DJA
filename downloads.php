@@ -30,11 +30,11 @@ include ('includes/header.html');
 </br></br>
 
 <h3> AU Recordformulier </h3>
-Het AU Recordformulier kun je <a target="_blank" href="http://www.atletiekunie.nl/index.php?page=293"><b>hier</b></a> downloaden.</br>
+Het AU Recordformulier kun je <b><a href="https://www.atletiekunie.nl/sites/default/files/userfiles/thema/jury-en-officials/documenten/Recordaanvraagformulier%20-%20augustus%202015.pdf">hier</a></b> downloaden.</br>
 </br>
 
 <h3>DJA Clubrecord formulier</h3>
-Klik <a href="downloads/clubrecordformulier.doc"><b>hier</b></a> om het DJA clubrecord formulier te downloaden.</br>
+Klik <a href="downloads/clubrecordformulier.docx"><b>hier</b></a> om het DJA clubrecord formulier te downloaden.</br>
 </br>
 
 <h3>Huishoudelijk reglement 2014</h3>

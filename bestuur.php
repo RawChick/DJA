@@ -1,7 +1,9 @@
 <?php	
 
 include ('includes/header.html');
-
+$link = mysqli_connect($host, $user, $password, $database);
+$query = "SELECT ID, titel FROM `management` ORDER BY datum DESC LIMIT 4";
+$result = mysqli_query($link, $query);
 ?>
 
 <div class= "bottomcontent">
@@ -14,15 +16,15 @@ include ('includes/header.html');
 					<content>
 						<p>
 					<h3>Mededelingen</h3>
-<a href="">Notulen algemene ledenvergadering, 29-04-2015</a></br>
+          <?php
+          while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+           echo" <a href='bestuursmededelingen.php?id=".$row['ID']."'>".$row['titel']."</a><br>";
+          }
 
-<a href="">Bestuursmededeling, juli 2015</a></br>
+          ?>
+<a href="bestuursmededelingen.php"><b>Meer mededelingen..</b></a><br>
+<br>Vanaf heden rolstoel aanwezig bij DJA, staat in het materialenhok. <br><br>
 
-<a href="">Bestuursmededeling, 15-04-2015</a></br>
-
-<a href="">Lees hier meer over de EHBO koffer.</a></br></br>
-
-Vanaf heden rolstoel aanwezig bij DJA, staat in het materialenhok. </h3>
 
 <h3>Bestuursleden</h3>
 

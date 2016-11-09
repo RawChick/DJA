@@ -13,7 +13,7 @@ include ('includes/header.html');
 					
 					<content>
 						<h4><a name="boven" id="boven"></a>Atletiekverenigingen in de regio.</h4>
-      <p>DJA behoort tot de ARWB. De ARWB is een samenwerkingsverband van 12 atletiekverenigingen en </br>5 buitengewonen leden in West-Brabant (<a href="http://www.regio12.nl">regio 12</a>), die allen zijn aangesloten bij de Atletiek Unie (AU).<br />
+      <p>DJA behoort tot de ARWB. De ARWB is een samenwerkingsverband van 11 atletiekverenigingen en </br>5 buitengewonen leden in West-Brabant (<a href="http://www.regio12.nl">regio 12</a>), die allen zijn aangesloten bij de Atletiek Unie (AU).<br />
         </br>Hieronder de betreffende verenigingen:
       </p>
       <ul>
@@ -39,21 +39,18 @@ include ('includes/header.html');
       <ul>
         <li><a href="http://www.vangoghloopzundert.nl" target="_blank">Van Goghloop, Zundert</a></li>
         <li><a href="http://www.bavoloop.nl" target="_blank">Bavoloop, Rijsbergen</a></li>
-        <li><a href="http://www.vvschijf.nl/site/index.php?id=54,599,0,0,1,0" target="_blank">Schijfse Turfloop, Schijf</a></li>
-        <li><a href="http://www.wbtv.nl/index.php?option=com_content&amp;view=article&amp;id=4&amp;Itemid=12" target="_blank">Rondje Sprundel, Sprundel</a></li>
-        <li><a href="http://www.hoevensepolderloop.nl">Hoevense Polderloop, Hoeven</a></li>
+        <li><a href="http://www.rrrucphen.nl/index.php?option=com_content&view=article&id=307&Itemid=170" target="_blank">Rondje Sprundel, Sprundel</a></li>
+        <li><a href="http://www.hoevensepolderloop.nl" target="_blank">Hoevense Polderloop, Hoeven</a></li>
       </ul></br>
 
 <h3><p>Diverse links:</p></h3>
       <ul>
-        <li><a href="http://www.atletiekunie.nl/index.php?page=3964">(inter)nationale kalender 2015 AU</a></li>
+        <li><a href="https://www.atletiek.nl/wedstrijden?_ga=1.53699823.636172726.1357216479#{"s":"","e":["in","out"],"pdst":0,"r":[],"d":[0],"sd":-30610227600,"ed":-30610227600}" target="_blank">(inter)nationale kalender 2015 AU</a></li>
         <li><a href="http://www.atletiekunie.nl" target="_blank">Atletiek Unie</a></li>
-        <li><a href="http://www.uitslagen.nl" target="_blank">Uitslagen</a></li>
-        <li><a href="http://www.dehardloopkrant.com" target="_blank">Hardloopkrant</a></li>
-        <li><a href="http://www.dehardloopkrant.com/inschrijven.php" target="_blank">Inschrijven voor diverse wedstrijden</a></li>
+        <li><a href="http://www.uitslagen.nl" target="_blank">Uitslagen.nl</a></li>
+        <li><a href="http://www.dehardloopkrant.com" target="_blank">Hardloopnieuws</a></li>
         <li><a href="http://www.afstandmeten.nl" target="_blank">www.afstandmeten.nl</a></li>
         <li><a href="http://www.atletiek.pagina.nl/" target="_blank">www.atletiek.pagina.nl</a></li>
-        <li><a href="http://www.atletiekverenigingen.pagina.nl" target="_blank">www.atletiekverenigingen.pagina.nl</a></li>
         <li><a href="http://www.tashi-delek.org" target="_blank">www.tashi-delek.org</a></li>
       </ul></br>
   </p>

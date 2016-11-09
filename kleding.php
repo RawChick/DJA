@@ -14,7 +14,7 @@ include ('includes/header.html');
 					<content>
 						<p><p>DJA beschikt over een uitgebreid assortiment clubkleding. Er valt te kiezen uit zomerkleding, maar ook voor de winter hebben we genoeg!</p>
       <p>Clubkleding voor zowel jeugd als volwassenen is te bestellen bij Inge van der Meulen.</p>
-      <p>Iedere eerste maandag van de maand, van 18.45 uur tot 19.15 uur is er de mogelijkheid om clubkleding te kopen. Mail van te voren dan wel eerst naar Inge zodat zij hiervan op de hoogte is.<br />
+      <p>Iedere eerste donderdag van de maand, van 18.45 uur tot 19.15 uur is er de mogelijkheid om clubkleding te kopen. Mail van te voren dan wel eerst naar Inge zodat zij hiervan op de hoogte is.<br />
       Dit kan naar <b><a href="mailto:ingevandermeulen@hotmail.com">ingevandermeulen@hotmail.com</a></b> </p>
       <p>Ook voor informatie over clubkleding kan je bij Inge terecht.</p>
       <table width="31%" border="1" cellspacing="2" cellpadding="3">

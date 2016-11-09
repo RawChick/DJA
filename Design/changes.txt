@@ -1,0 +1,9 @@
+/database/dja.sql change -  	Database: `dja` -> Database: `djazundert`
+				every DATETIME -> TIMESTAMP
+
+
+/php/connection.php		Change database info
+
+send_form_email.php		change line 22 ->  $email_to = "ostaijenhoof@hetnet.nl";
+
+addphoto.php			change line 47 and 64 to correct directory

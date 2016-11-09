@@ -1,6 +1,10 @@
 <?php
 	$host ="localhost";
 	$user ="root";
-	$pass ="";
+	$password ="";
 	$database = "dja";
+
+$link = mysqli_connect($host, $user, $password, $database);
+$conn = mysqli_connect($host, $user, $password, $database);
+
 ?>

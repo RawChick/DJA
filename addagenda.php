@@ -1,5 +1,5 @@
 <?php	
-
+session_start();
 include ('includes/header.html');
 
 ?>
@@ -8,11 +8,24 @@ include ('includes/header.html');
 
 				<article class="mainbar">	
 					<header>
+            <?php
+ if (empty($_SESSION['myemail'])) {
+    echo "<h2><b> Inloggen</b> </h2><br></header>
+    <content>
+    <p>U bent niet ingelogd.<a href='inloggen.php'> Login</a>\n</p>\n";
+} else {
+  $sql2 = "SELECT email, function FROM users WHERE email = '".$_SESSION['myemail']."'";
+$result2 = mysqli_query($conn, $sql2);
+$row = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+$function = $row['function']; 
+if ($function == 'Admin' || $function == 'Trainer' || $function == 'RSC'){
+?>
 						<h2><b>Voeg agenda-items toe</b></h2>
 					</header>
 					
 					<content>
-						<p></br>
+          
+						<p><br>
 
 							<form action="addagenda.php" method="post" class="formulier">
   <?php	
@@ -20,6 +33,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' &&
     isset($_POST['begindate'], $_POST['enddate'], $_POST['activity']) )
 {
     
+ 
+  $url = addslashes($_POST['url']);
 
 // foutmeldigen worden in een array opgeslagen
     $aErrors = array();
@@ -68,10 +83,11 @@ function adds($string)
  return $result;
 } 
 
+$link = mysqli_connect($host, $user, $password, $database);
 
 $getbegindate = $_POST['begindate'];
 $getenddate = $_POST['enddate'];
-$getactivity = mysqli_real_escape_string($conn, $_POST['activity']);
+$getactivity = mysqli_real_escape_string($link, $_POST['activity']);
 
 $formatbegindate = DateTime::createFromFormat('d-m-Y', $getbegindate);
 $begindate = $formatbegindate->format('Y-m-d');
@@ -84,19 +100,14 @@ $enddate = $formatenddate->format('Y-m-d');
 }
 
 
-$sql =  "INSERT INTO agenda (
-begindate, 
-enddate, 
-activity
-)
-       VALUES('$begindate', '$enddate', '$getactivity')";
+$query = "INSERT INTO agenda (begindate, enddate, activity, url) VALUES('$begindate', '$enddate', '$getactivity', '$url')";
+$result = mysqli_query($link, $query);
 
           
-if ($conn->query($sql) === TRUE) { 
+if ($result === true) { 
     
     echo "<b>Agenda-Item toegevoegd</b>"; 
 } else { 
-    echo "Error: " . $sql . "<br>" . $conn->error; 
     echo "Er is helaas iets mis gegaan, neem alstublieft contact op met de webmaster.";
 } 
 
@@ -105,37 +116,44 @@ if ($conn->query($sql) === TRUE) {
 }
 
   ?>
-  <p>Vul het onderstaande formulier in. De velden met een <em>* </em> zijn verplicht.</p>
-</br>
+  <p>Vul het onderstaande formulier in. De velden met een <em>* </em> zijn verplicht.</p><br>
+  In het vakje <b><u>Url</u></b> kunt u een link naar een andere pagina invoeren. <u><i>Bijvoorbeeld: www.dja-zundert.nl/lidmaatschap.php</i></u>
+  <br>
   <fieldset>
-    <legend>Uw gegevens</legend>
+    <legend>Nieuwe activiteit</legend>
    
     <ol>
       <?php echo isset($aErrors['begindate']) ? '<li class="error">' : '<li>' ?>
         <label for="begindate">Begindatum<em>*</em></label>
-        <input id="begindate" name="begindate" value="<?php echo isset($_POST['begindate']) ? htmlspecialchars($_POST['begindate']) : '' ?>" />
+        <input id="begindate" name="begindate" value="<?php echo isset($_POST['begindate']) ? htmlspecialchars($_POST['begindate']) : '' ?>" /> <b> DD-MM-JJJJ </b>
       </li>
       
       <?php echo isset($aErrors['enddate']) ? '<li class="error">' : '<li>' ?>
         <label for="enddate">Einddatum </label>
-        <input id="enddate" name="enddate" value="<?php echo isset($_POST['enddate']) ? htmlspecialchars($_POST['enddate']) : '' ?>" />
+        <input id="enddate" name="enddate" value="<?php echo isset($_POST['enddate']) ? htmlspecialchars($_POST['enddate']) : '' ?>" /> <b> DD-MM-JJJJ </b>
       </li>
       <?php echo isset($aErrors['activity']) ? '<li class="error">' : '<li>' ?>
         <label for="adres">Activiteit<em>*</em></label>
         <textarea id="activity" rows="3" cols="34" name="activity" value="<?php echo isset($_POST['activity']) ? htmlspecialchars($_POST['activity']) : '' ?>" /></textarea>
       </li>
-
+      <li>
+     <label for="link">Url</label> 
+<input type="text" name="url"><br><br>
+</li>
     </ol>
     <input type="submit" value="Verstuur" class="button"/>
   </fieldset>
 </form>
+<?php }else { 
+    echo "<b>U heeft niet de juiste rechten om deze pagina te bezoeken</b>";
+    } ?>
 					</content>
 				</article>
 					
 </div>
 
 <?php	
-
+}
 include ('includes/footer.html');
 
 ?>

@@ -11,44 +11,40 @@ include ('includes/header.html');
 			<h2><b>Registratie</b></h2>
 		</header>
 				
-		<form name="form1" method="post" action="php/register_new.php">
+		<form name="form1" method="post" class="formulier" action="php/register_new.php">
 						
-			<div class="form-group span5">
 				<label>Voornaam</label>
-				<input type="text" name="firstname" class="form-control" id="firstname" value="">
-			</div>
-							
-			<div class="form-group span5">
+				<input type="text" name="firstname" id="firstname" value="">				
+		<br>
 				<label>Achternaam</label>
-				<input type="text" name="lastname" class="form-control" id="lastname" value="">
-			</div>
-											
-			<div class="form-group span5">
+				<input type="text" name="lastname" id="lastname" value="">							
+	<br>
 				<label>Email Adres</label>
-				<input type="email" name="email1" class="form-control" id="email1" value="">
-			</div>
-							
-			<div class="form-group span5">
+				<input type="email" name="email1" id="email1" value="">
+		<br>
 				<label>Functie</label>
 				 <select name="function">
-				     <option value="1"> Trainer </option>
-				     <option value="Admin">Admin</option>
-				     <option value="LedenAdministratie">LedenAdministratie</option>
-				     <option value="ClubRecords">ClubRecords</option>
-				     <option value="SponsorCommisie">SponsorCommisie </option>
-				     <option value="Bestuur">Bestuur</option>
+				 	<option value="Admin">Admin</option>
+				 	<option value="Bestuur">Bestuur</option>
+				 	<option value="ClubRecords">ClubRecords</option>
+				 	<option value="LedenAdministratie">LedenAdministratie</option>
+				    <option value="RSC">RSC</option>
+				    <option value="SponsorCommisie">SponsorCommisie </option>
+				    <option value="Trainer"> Trainer </option>
+				   
+				    
 				 </select>
-			</div>
-							
-			<div class="form-group span5">
+						
+	<br>
 				<label>Wachtwoord</label>
-				<input type="password" name="pass1" class="form-control" id="pass1" value="">
-			</div>
-							
-							
-			<div class="form-group span12">
-				<button type="submit" class="btn btn-primary">Aanmelden</button>
-			</div>
+				<input type="password" name="pass1" id="pass1" value="">
+	
+		<br>&nbsp;&nbsp;&nbsp;&nbsp;
+				<button type="submit">Aanmelden</button>
+<br><br>
+					Na aanmelden moet de webbeheerder de aanmelding eerst verifiëren.<br>
+		Pas daarna kan er ingelogd worden.
+		
 
 		</form>
 		</div>

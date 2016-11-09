@@ -25,8 +25,8 @@ include ('includes/header.html');
 <h5>D.J.A. is aangesloten bij de volgende organisaties:</h5>
     <ul>
         <li>AU (Atletiek Unie). Ons verenigingsnummer is 12314</li>
-        <li>ARWB (Atletiek Regio West Brabant). De ARWB is een samenwerkingsverband van 13 atletiekverenigingen 
-        	en 5 buitengewone leden (stichtingen) in West-Brabant, die allen zijn aangesloten bij de AU. 
+        <li>ARWB (Atletiek Regio West Brabant). De ARWB is een samenwerkingsverband van 11 atletiekverenigingen 
+        	en 7 buitengewone leden (stichtingen) in West-Brabant, die allen zijn aangesloten bij de AU. 
         	U vindt meer informatie op de website: <a href="http://www.regio12.nl" target="_blank">www.regio12.nl</a></li>
     </ul>
 
@@ -44,19 +44,18 @@ include ('includes/header.html');
 	      <a href="mailto:marlies.van.geel@planet.nl"></a>. <a href="mailto:karinvandenbroek@hotmail.com">karinvandenbroek@hotmail.com</a>
 
 <h4>Wedstrijdsecretariaat uit en thuis:</h4>
-	      Pupillen en C/D Junioren: Cilia Mathijssen, Lavendelring 46, 4881 GW&nbsp; Zundert. Tel. 06-36563694. 
+	      Pupillen en C/D Junioren: Cilia Mathijssen. Tell. 06-36563694. 
 	      <a href="mailto:ciliahense@gmail.com">dja.zundert@gmail.com</a>
-    	  Atleten die willen/moeten voorinschrijven, kunnen dit doen via internet, middels een A-formulier. 
-    	  Dit kan men vinden onder de knop &quot;Downloads&quot;.<br />
+  Atleten die willen/moeten voorinschrijven, kunnen dit doen via internet, middels een <a href="downloads/aformulier.xlsx">A-formulier</a>.<br />
      	  Het inschrijven is een verantwoordelijkheid van de atleet zelf. 
 
-<h4>Contactpersoon EHBO:</h4>
+          <h4>Contactpersoon EHBO:</h4>
 	      Ina Gommers, Meidoornstraat 30, 4881&nbsp; AB Zundert, tel. 076-5976426. <a href="mailto:ina.gommers@home.nl">ina.gommers@home.nl</a>
 
 <h4>Ledenadministratie:</h4>
 	      De ledenadministratie wordt verzorgd door Sonja van Ostaijen-van Hoof, Stuivezandseweg 1a, 4882 NG &nbsp; Klein Zundert, tel. 076-5971447. 
 	      <a href="mailto:ledenadministratie@dja-zundert.nl">ledenadministratie@dja-zundert.nl</a>
-   	  <strong>Aanmelden</strong> nieuwe leden: via het <a href="inschrijfformulier.html">inschrijfformulier</a>.
+   	  <strong>Aanmelden</strong> nieuwe leden: via het <a href="inschrijven.php">inschrijfformulier</a>.
       <strong>Afmelden</strong>: uitsluitend <strong>schriftelijk</strong> 
       	  bij Sonja van Ostaijen vóór 1 november voorafgaande aan het jaar met ingang waarvan de opzegging moet ingaan. 
       	  Bij te late opzegging moet DJA het volledige bondsgeld voor het eerstvolgende kalenderjaar aan de AU betalen. 
@@ -77,8 +76,12 @@ include ('includes/header.html');
   <a href="mailto:jeugdzaken@dja-zundert.nl">anoukvermeiren@hotmail.com</a>
 
 <h4>Juryco&ouml;rdinatie (JuCo):</h4>
-	      De juryco&ouml;rdinatie is in handen van Anja de Koning, Den Dries 47, 4882 BJ&nbsp; Klein Zundert, tel. 076-5976317. 
-	      <a href="mailto:anja_dekoning@hotmail.com">anja_dekoning@hotmail.com</a>
+	      <p>De juryco&ouml;rdinatie is in handen van Anja de Koning,  tel. 076-5976317. 
+	        <a href="mailto:anja_dekoning@hotmail.com">anja_dekoning@hotmail.com</a></p>
+	      <h4>Huishoudelijk reglement De Jonge Athleet 2014:</h4>
+	      <p>Klik <a href="pdf/huishoudelijk reglement 2014.pdf">hier</a> om het huishoudelijk reglement te lezen</p>
+	      <h4>Statuten 1997:</h4>
+	      <p>Klik <a href="pdf/Statuten DJA_1997.pdf">hier</a> voor de statuten</p>
 
 
 </p>

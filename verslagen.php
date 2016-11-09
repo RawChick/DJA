@@ -1,24 +1,53 @@
 <?php	
 
 include ('includes/header.html');
+$link = mysqli_connect($host, $user, $password, $database);
 
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+
+$query = "SELECT * FROM `text_reports` WHERE `ID` = $id";
+$result = mysqli_query($link, $query);
+} 
+$query2 = "SELECT * FROM `text_reports` ORDER BY datum DESC";
+$result2 = mysqli_query($link, $query2);
 ?>
 
 <div class= "bottomcontent">
 
 				<article class="mainbar">	
 					<header>
-						<h2><b>Verslagen</b></h2>
+						<?php
+						if(empty($_GET["id"])){
+
+echo "<table width=100%>"; 
+
+while($row = mysqli_fetch_array($result2, MYSQLI_ASSOC)) {
+
+$time = strtotime($row["datum"]);
+$myDate = date($time );
+setlocale(LC_TIME, array('nl_NL.UTF-8','nl_NL@euro','nl_NL','dutch'));
+
+ 
+echo"<tr><td><a href=\"verslagen.php?id=".$row['ID']."\"><b>".strftime("%#d-%m-%Y", $myDate)."<br>".$row["titel"]."</b></a></td></tr>";		
+}		
+
+echo"</table>";
+						}else {
+						while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+
+					echo"	<h2><b>".$row["titel"]."</b></h2>
 					</header>
 					
 					<content>
-						<p>
-
-</p>
+					<a href=\"verslagen.php\"><b>Terug naar overzicht..</b></a><br><br>
+						<p>".$row["tekst"]."<br></p>
 
 					</content>
-				</article>
-					
+				</article>";
+					}
+				}
+					?>
 </div>
 
 <?php	

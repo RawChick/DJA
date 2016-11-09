@@ -11,8 +11,9 @@ include ('includes/header.html');
 					<header>
 						<h2><b>Ereleden</b></h2>
 					</header>
-					
+				
 					<content>
+       <div class="border">
 						<p></br><table width="50%" border="1" cellspacing="1" cellpadding="1">
         <tr>
           <th><strong>Naam</strong></th>
@@ -63,6 +64,8 @@ include ('includes/header.html');
           <td>1977</td>
         </tr>
       </table>
+						<p>DJA is op zoek naar Jan de Bruin. Weet iemand waar hij is gebleven? Graag doorgeven aan onze voorzitter, Niels van Namen (voorzitter@dja-zundert.nl).</p>
+       </div>
       <div class="erefoto">
       <p><img src="images/ereleden.jpg" width="50%" height="auto" alt="Ereleden DJA" /></p></p>
 				</div>

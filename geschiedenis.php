@@ -121,8 +121,7 @@ echo"</tr>
   </br>
 Noot: De terugblik is natuurlijk een persoonlijke inschatting van wat mogelijk interessant zou kunnen zijn voor leden en oud-leden.</br>
 Ook worden feiten / beslissingen gememoreerd die nu nog bestaan en daardoor is het mogelijk om de ontwikkeling daarvan in de jaren volgend te laten zien. </br>
-De Zundertse bode heeft geen ruimte om iedere week de terugblik te plaatsen, vandaar dat deze alleen te zien is op de website http://www.dja-zundert.nl.</br>
-Mocht er inhoudelijk commentaar en of correcties zijn, stuur deze dan naar:</br>
+ Mocht er inhoudelijk commentaar en of correcties zijn, stuur deze dan naar:</br>
 Harry van Hasselt e-mail:  <a href="mailto:h.c.v.hasselt@home.nl">h.c.v.hasselt@home.nl</a></br>
 Ook jaarverslagen en of bestuursnotulen over de periode 1965 – 1980 zijn welkom.</br>
 

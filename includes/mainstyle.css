@@ -1,26 +1,89 @@
-/* ===========================
-   ======= Body ======== 
-   =========================== */
+html {
+
+background: url("../images/baan.jpg") no-repeat fixed top;
+background-size: cover;
+width: 100%;
+margin: auto;  
+
+  bottom: 0;
+  left:0;
+  right: 0;
+  top: 0;  
+}
+
+input[type=checkbox]
+{
+  -webkit-appearance:checkbox;
+}
+
+/* ====================================================================================
+   ======================================= Body =======================================
+   ==================================================================================== */
    
 body {
-	background: #E5E4E2;
 
-    width: 70%;
-    height: 100%;
+	width: 75%;
 	color: #000305;
 	font-size: 87.5%; /* Base font size: 14px */
-	font-family: "Veranda", Geneva, sans-serif;
 	margin: 0 auto;
 	clear: both;
 	padding: 0;
 	text-align: left;
 	}
 
+.loader {
+margin: auto;  
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right: 0;
+  top: 150px;  
+	width: 50%;
+	height: 50%;
+	z-index: 9999;
+	background: url('../images/spinner.gif') 50% 50% no-repeat;
 
+}
+
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+:-moz-placeholder {
+   font-style: italic;  
+}
+::-moz-placeholder {
+   font-style: italic;  
+}
+:-ms-input-placeholder {  
+   font-style: italic; 
+}
+
+#slideshow {
+    position:relative;
+    height:150px;
+width:250px;
+}
+
+#slideshow .slide {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+}
+
+#slideshow div.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow div.last-active {
+    z-index:9;
+}
 	
-/* ===========================
-   ========= Headings van site======== 
-   =========================== */
+/* =================================================================================
+   ==================================== Headings =================================== 
+   ================================================================================= */
 h2 {font-size: 1.571em}	/* 22px */
 h3 {font-size: 1.429em}	/* 20px */
 h4 {font-size: 1.286em}	/* 18px */
@@ -32,6 +95,14 @@ h2, h3, h4, h5, h6 {
 	line-height: 1.1;
 	margin-bottom: .8em;
 }
+
+table {
+ 
+}
+
+/* =================================================================================
+   ===================================== Errors ==================================== 
+   ================================================================================= */
 
 .error, .ad {
 	font-weight: bold;
@@ -50,24 +121,52 @@ h2, h3, h4, h5, h6 {
 	padding: 4px;
 }
 
-/* ===========================
-   ========== Header =========
-   =========================== */
- 
-.header img {
-height: 170px;
-margin: 10px 10px 10px 0px;
-	
+
+/* =================================================================================
+   ====================================== Main =====================================
+   ================================================================================= */
+ .main { 
+
 }
 
+.banner img{
+margin: 0px 0px 12px 0px;
+width: 100%;
 
+ 
+}
 
-/* ===========================
-   ===== Main Navigatie ===== 
-   =========================== */
+/* =================================================================================
+   ================================== Sponsorbar =================================== 
+   ================================================================================= */
+
+.sponsorbar img {
+	max-height: 180px;
+    max-width: 250px;
+}
+
+.sponsorlijst {
+	
+	float: left;
+
+}
+
+.emptydiv {
+	height: 172px;
+	width: 282px;
+}
+
+.emptynewsdiv {
+	height: 85px;
+	overflow: hidden;
+	
+}
+/* =================================================================================
+   =================================== Navigatie =================================== 
+   ================================================================================= */
 
 .navigation {
-width: 99.8%;
+
 height: 50px;
 background: #4FA968;
 float: none;
@@ -90,8 +189,9 @@ color: #505050;
 	list-style-type:none;
 	margin:0;
 	padding:0;
-	width:100%;
+width: 75%;
 	z-index: 1;	
+
 }
 
 /*Create a horizontal list with spacing*/
@@ -103,10 +203,10 @@ color: #505050;
     	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box; /* Fixes Firefox bug */
 	box-sizing: border-box;
-    	width: 14%;
+    	width: 20% ;
     	text-align: center;
 	z-index:1;
-
+	
 }
 
 /*Style for menu links*/
@@ -120,6 +220,7 @@ color: #505050;
 	color: #FFFFFF;
 	background: #4FA968;
 	text-decoration: none;
+
 }
 
 /*Hover state for top level links*/
@@ -136,6 +237,7 @@ color: #505050;
 	z-index: 1;
 	overflow:hidden;
 	line-height: 20px;
+	
 }
 
 /*Hover state for dropdown links*/
@@ -143,6 +245,7 @@ color: #505050;
 	background: #4FA968;
 	color: #000000;
 	z-index: 1;
+	
 }
 
 /*Hide dropdown links until they are needed*/
@@ -166,12 +269,16 @@ color: #505050;
 	z-index: 1;
 }
 
+
 /*Display the dropdown on hover*/
 .navigation ul li a:hover + .hidden, .hidden:hover {
 	display: block;
 	z-index: 1;
+	width: 20%;
 }
-
+.hidden li {
+	width: 100% !important;
+}
 /*Style 'show menu' label button and hide it by default*/
 .show-menu {
 	text-decoration: none;
@@ -185,13 +292,15 @@ color: #505050;
 }
 
 .show-menu img {
-position: absolute;
-top: 183px;
+position: relative;
+top: 10px;
+right: 4px;
+z-index: 5;
 
 }
 
 /*Hide checkbox*/
-input[type=checkbox]{
+.navigation input[type=checkbox]{
     display: none;
 	z-index: 1;
 }
@@ -202,115 +311,192 @@ input[type=checkbox]:checked ~ #menu{
 	z-index: 1;
 }
 
-/* ===========================
-   ======= Content omgeving ====== 
-   =========================== */
+
+/* =================================================================================
+   ===================================== Main ====================================== 
+   ================================================================================= */
+
+.mainbar {
+	background: #FFFFFF url(images/bg01.png) repeat;
+	opacity: 0.95;
+	float: left;
+	width: 94%;
+	padding: 5% 5%;
+	min-height: 400px;
+	
+}
+
+.mainbar img {
+	opacity: 1.0;
+}
+
+/* =================================================================================
+   =============================== Topcontent (index) ==============================
+   ================================================================================= */
 
 .topcontent {
 	overflow: hidden;
 	line-height: 25px;
 	vertical-align: center;
+	margin: 12px 0 0 0;
 
 }
 
-.topbar {
-	opacity: 0.85;
+.topleft {
 	float: left;
-	width: 400px;
-	height: 300px;
-	margin: 15px 10px 5px 0;
-border-color: #222222;
-border-style:solid;
-border-width: 1px;
+	width: 30%;
+	margin: 0 25px 5px 0;
 }
+
+.topleft img {
+    	display: block;
+    	max-width:400px;
+    	max-height:240px;
+	width: 100% !important;
+    	height: auto !important;
+}
+
+.outer {
+width: 100%;
+
+position: relative;
+}
+
+.outer .inner{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.topcenter {
+	width: 22%;
+	height: auto;
+	margin: auto;
+	display: inline-block;
+	opacity: 0.9;
+
+}
+
+.topcenterchild {
+
+	width: 100%;
+	line-height: 20px;	
+	height: auto;
+	background: #FFFFFF url(images/bg01.png) repeat;
+	opacity: 0.85;
+	padding: 5% 5%;
+	text-align: center;
+}
+
+.topright {
+	width: 42%;
+	float: right;
+	background: #FFFFFF url(images/bg01.png) repeat;
+	opacity: 0.95;
+}
+
+/* ===================================================================================
+   ============================== Bottomcontent (index) ============================== 
+   =================================================================================== */
 
 .bottomcontent {
-overflow: hidden;
+overflow: scroll;
 line-height:25px;
-float: bottom;
-margin: 15px 0;
+padding: 1%;
+margin: 0 0 12px 0;
+opacity: 0.90;
 }
 
-.bottombar {
-	background-color: #FFF;	
+.fotoalbum {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.bottomleft {
+	background: #FFFFFF url(images/bg01.png) repeat;
 	opacity: 0.85;
 	float: left;
-	width: 64%;
+	width: 63%;
 	padding: 2% 4%;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
+	height: 277px;
 
 }
 
-.mainbar {
-	background-color: #FFF;	
-	opacity: 0.85;
-	float: left;
-	width: 94%;
-	padding: 2% 4%;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+.bottomleftupper {
+
+height: 200px;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
-.googlemaps {
-display:none;
+.bottomleftlower {
+	padding-top: 5px;
+	height: 30px;
 }
 
-/* ===========================
-   ========= Sidebar ========= 
-   =========================== */
-
-.top-sidebar {
-	width: 40%;
-	height: 50%;
+.bottomright {
+	width: 22%;
+	height: 277px;
 	float: right;
-	margin-left: 1%;
-	background-color: #FBFBFB;
-	margin: 15px 0 5px 0;
-border-color: #222222;
-border-style:solid;
-border-width: 1px;
+	line-height: 20px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+	background: #FFFFFF url(images/bg01.png) repeat;
+	opacity: 0.85;
+	padding: 2% 3%;
+	text-align: center;
 }
 
-.top-centerbar {
-	width: 20%;
-	height: 50%;
-	margin: auto;
-	background-color: #FBFBFB;
-
-border-color: #222222;
-border-style:solid;
-border-width: 1px;
+.bottomrightupper {
+	height: 160px;
 }
 
-table  {
-border-collapse:collapse;
-border-spacing:0;
+.sunshinefooter {
+height: 70px;
+text-align: center;
+padding-bottom: 10px;
 
-border-color: #222222;
+
+}
+
+/* =================================================================================
+   ==================================== Tables ===================================== 
+   ================================================================================= */
+
+.border table  {
+	border-collapse:collapse;
+	border-spacing:0;
+	border-color: #000000;
+	border-style:solid;
+	border-width: 1px;
+
+}
+
+.border td{
 border-style:solid;
-border-width: 1px;
-
+border-width:1px;
+border-color:#000000;
 }
 
 td {
+width:1%;
+padding: 10px;
+background: #FFFFFF url(images/bg01.png) repeat;
 
-padding: 2.1% 3%;
-border-style:solid;
-border-width:1px;
-background: #FBFBFB;
-overflow:hidden;
-line-height: 20px;
 }
 
 .nopadding td {
 padding: 0.1%;
 border-style:solid;
 border-width:1px;
-background: #FBFBFB;
-overflow:hidden;
+background: #FFFFFF url(images/bg01.png) repeat;
+text-overflow: ellipsis;
 line-height: 20px;
 }
 
@@ -318,7 +504,7 @@ th{
 font-family:Arial, sans-serif;
 font-size:14px;
 padding:10px 20px;
-overflow:hidden;
+text-overflow: ellipsis;
 background-color: #4FA968;
 color:#FFFFFF;
 }
@@ -328,6 +514,19 @@ border-collapse: collapse;
 border: none;
 }
 
+.meerkamp td {
+padding: 10px;
+border-style:solid;
+border-width:1px;
+background: #FFFFFF url(images/bg01.png) repeat;
+line-height: 20px;
+text-align: center;
+}
+
+/* =================================================================================
+   ==================================== Overig ===================================== 
+   ================================================================================= */
+
 .linkfoto {
 padding: 8px;
 display: none;
@@ -335,35 +534,19 @@ display: none;
 }
 .linkfoto img {
 padding-top: 10px;
+padding-left: 7px;
 position: absolute;
-top: 485px;
+top: 504px;
+}
+
+.googlemaps {
+display:none;
 }
 
 
-.bottom-sidebar {
-position: relative;
-	width: 21%;
-	height: 300px;
-	float: right;
-	line-height: 20px;
-	border-radius: 5px;
-	-moz-border-r1adius: 5px;
-	-webkit-border-radius: 5px;	
-	background-color: #FFF;
-	opacity: 0.85;
-	padding: 2% 3%;
-}
-
-.sunshinefooter {
-position: absolute;
-bottom: 30px;
-
-
-}
-
-/* ===========================
-   ========= Footer ========== 
-   =========================== */
+/* =================================================================================
+   ==================================== Footer ===================================== 
+   ================================================================================= */
 
 .mainFooter {
 	width: 100%;
@@ -396,9 +579,9 @@ padding-right: 20px;
 margin: 0 3px;
 }
 
-/* ===========================
-   ======== Invulforms =======
-   =========================== */
+/* =================================================================================
+   =================================== Invulforms ==================================
+   ================================================================================= */
 form.formulier fieldset {	
 		margin: 20px;
 		border: 1px solid #aaa;
@@ -445,9 +628,9 @@ form.formulier label {
 }
 
 
-/* ===========================
-   ======== Responsive =======
-   =========================== */
+/* =================================================================================
+   =================================== Responsive ==================================
+   ================================================================================= */
 
 
 /* ==================
@@ -455,7 +638,7 @@ form.formulier label {
    ================== */
 
 @media screen and (max-width:1250px) {
-.topbar {
+.topleft {
 display:none;
 }
 
@@ -463,12 +646,31 @@ display:none;
 display: block;
 }
 
-.top-sidebar {
+.topcenter {
 width: 100%;
+text-align:  left;
+height: 180px; 
+margin: 0;
 }
 
-td {
-padding: 15px 3%;
+.topcenterchild {
+width:115%;
+height: 180px;
+margin: 0;
+text-align: left;
+}
+
+.topright {
+width: 100%;
+margin-top: 6%;
+}
+
+.bottomleft {
+width: 58%;
+}
+
+.bottomright {
+width: 27%;
 }
 
 .maintable table {
@@ -479,11 +681,6 @@ width: 80%;
 width: 80%;
 height: auto;
 }
-
-.header img {
-height: 150px;
-
-}
 }
 
 /* ==================
@@ -491,23 +688,53 @@ height: 150px;
    ================== */
 @media screen and (max-width : 1185px){
 
-.bottombar {
+.bottomleft {
 width: 92%;
+height: 300px;
 }
 
-.bottom-sidebar {
+.bottomright {
 width: 94%;
-height: 250px;
+height: 300px;
 margin-top: 10px;
+
 }
 
-.bottom-sidebar img {
-
-padding-left: 200px;
-}
 }
 
 
+@media screen and (max-width : 955px){
+	/*Make dropdown links appear inline*/
+	.navigation ul {
+		
+		z-index: 10;
+		width:100%;
+	
+	}
+
+.main{
+width:100%;
+
+}
+
+body {
+width:100%;
+}
+
+th {
+width: auto !important;
+}
+
+col {
+width: auto !important;
+}
+
+wrap {
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+
+}
 
 /* ==================
      Mobile - 760px
@@ -516,8 +743,11 @@ padding-left: 200px;
 @media screen and (max-width : 760px){
 	/*Make dropdown links appear inline*/
 	.navigation ul {
-		position: static;
+		position: absolute;
 		display: none;
+		z-index: 10;
+		width:100%;
+	
 	}
 	/*Create vertical spacing*/
 	.navigation li {
@@ -527,10 +757,24 @@ padding-left: 200px;
 	.navigation ul li, .navigation li a {
 		width: 100%;
 	}
+
+	.navigation ul li a:hover + .hidden, .hidden:hover {
+	width: 100%;
+	}
+
 	/*Display 'show menu' link*/
 	.show-menu {
 		display:block;
 	}
+
+.main{
+width:100%;
+
+}
+
+.sponsorbar{
+	display: none;
+}
 
 .map {
 display: none;
@@ -567,3 +811,5 @@ overflow-x: auto;
 }
 
 }
+
+
