@@ -321,7 +321,7 @@ input[type=checkbox]:checked ~ #menu{
 	opacity: 0.95;
 	float: left;
 	min-width: 80%;
-	padding: 5% 5%;
+	padding: 5%;
 }
 
 .mainbar img {
@@ -400,10 +400,11 @@ position: relative;
    =================================================================================== */
 
 .bottomcontent {
-overflow: scroll;
 line-height:25px;
 margin: 0 0 12px 0;
 opacity: 0.90;
+background: #FFFFFF url(images/bg01.png) repeat;
+overflow: scroll;
 }
 
 .fotoalbum {
@@ -643,6 +644,10 @@ display:none;
 display: block;
 }
 
+.mainbar{
+	padding: 8%;
+}
+
 .topcenter {
 width: 100%;
 text-align:  left;
@@ -711,7 +716,6 @@ margin-top: 10px;
 
 .main{
 width:100%;
-
 }
 
 body {
@@ -808,5 +812,3 @@ overflow-x: auto;
 }
 
 }
-
-

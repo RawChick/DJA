@@ -23,10 +23,9 @@ input[type=checkbox]
    
 body {
 
-	width: 70%;
+	width: 75%;
 	color: #000305;
 	font-size: 87.5%; /* Base font size: 14px */
-	font-family: "Veranda", Geneva, sans-serif;
 	margin: 0 auto;
 	clear: both;
 	padding: 0;
@@ -48,52 +47,30 @@ margin: auto;
 }
 
 
-.emptynewsdiv {
-	height: 85px;
-	overflow: hidden;
+
+#slideshow {
+    position:relative;
+    height:150px;
+width:250px;
+}
+
+#slideshow .slide {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+}
+
+#slideshow div.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow div.last-active {
+    z-index:9;
+}
 	
-}
-	
-ul.style3 {
-	margin: 0px;
-	padding: 10px 0px 0px 0px;
-	list-style: none;
-}
-
-ul.style3 li {
-	clear: both;
-	margin-bottom: 25px;
-	padding: 40px 0px 20px 0px;
-	border-top: 1px solid #C2C2C2;
-}
-
-ul.style3 h3 {
-	padding-bottom: 5px;
-	font-size: 1.2em;
-	color: #262116;
-}
-
-ul.style3 p {
-	line-height: 150%;
-}
-
-ul.style3 .button-style {
-	float: left;
-	margin-top: 0px;
-}
-
-ul.style3 img
-{
-	float: left;
-	margin-right: 3em;
-}
-
-ul.style3 .first {
-	padding-top: 0px;
-	border-top: none;
-	box-shadow: none;
-}
-
 /* =================================================================================
    ==================================== Headings =================================== 
    ================================================================================= */
@@ -149,40 +126,27 @@ width: 100%;
    ================================== Sponsorbar =================================== 
    ================================================================================= */
 
-.sponsorbar {
-	opacity: 0.85;
-	width: 14%;
-	position: fixed;
-	text-align: center;
-	padding: 20px 0;
-
-}
-
 .sponsorbar img {
-
-    width:60%;
+	max-height: 180px;
+    max-width: 250px;
 }
 
-.sponsorbarleft{
+.sponsorlijst {
 	
-	width: 14%;
-	position: fixed;
-	text-align: center;
-	padding: 20px 0;
-float: left;
-	left: 0;	
+	float: left;
+
 }
 
-.sponsorbarright {
-		
-	width: 14%;
-	position: fixed;
-	text-align: center;
-	padding: 20px 0;
-float: right;
-	right: 0;
+.emptydiv {
+	height: 172px;
+	width: 282px;
 }
 
+.emptynewsdiv {
+	height: 85px;
+	overflow: hidden;
+	
+}
 /* =================================================================================
    =================================== Navigatie =================================== 
    ================================================================================= */
@@ -211,7 +175,7 @@ color: #505050;
 	list-style-type:none;
 	margin:0;
 	padding:0;
-width: 70%;
+width: 75%;
 	z-index: 1;	
 
 }
@@ -345,6 +309,7 @@ input[type=checkbox]:checked ~ #menu{
 	width: 94%;
 	min-height: 400px;
 	padding: 5% 5%;
+	
 }
 
 .mainbar img {
@@ -415,7 +380,7 @@ position: relative;
 	width: 42%;
 	float: right;
 	background: #FFFFFF url(images/bg01.png) repeat;
-	opacity: 0.85;
+	opacity: 0.95;
 }
 
 /* ===================================================================================
@@ -425,8 +390,7 @@ position: relative;
 .bottomcontent {
 overflow: hidden;
 line-height:25px;
-float: bottom;
-margin: 12px 0;
+margin: 0 0 12px 0;
 opacity: 0.90;
 }
 
@@ -444,7 +408,7 @@ opacity: 0.90;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-
+	height: 277px;
 
 }
 
@@ -462,7 +426,7 @@ text-overflow: ellipsis;
 
 .bottomright {
 	width: 22%;
-	height: 350px;
+	height: 277px;
 	float: right;
 	line-height: 20px;
 	border-radius: 5px;
@@ -479,7 +443,7 @@ text-overflow: ellipsis;
 }
 
 .sunshinefooter {
-height: 100px;
+height: 70px;
 text-align: center;
 padding-bottom: 10px;
 
@@ -683,12 +647,10 @@ margin-top: 6%;
 
 .bottomleft {
 width: 58%;
-overflow-y:scroll;
 }
 
 .bottomright {
 width: 27%;
-
 }
 
 td {
@@ -717,16 +679,46 @@ height: 300px;
 
 .bottomright {
 width: 94%;
-height: 350px;
+height: 300px;
 margin-top: 10px;
 
 }
 
-
-
 }
 
 
+@media screen and (max-width : 955px){
+	/*Make dropdown links appear inline*/
+	.navigation ul {
+		
+		z-index: 10;
+		width:100%;
+	
+	}
+
+.main{
+width:100%;
+
+}
+
+body {
+width:100%;
+}
+
+th {
+width: auto !important;
+}
+
+col {
+width: auto !important;
+}
+
+wrap {
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+}
+
+}
 
 /* ==================
      Mobile - 760px
@@ -803,3 +795,5 @@ overflow-x: auto;
 }
 
 }
+
+

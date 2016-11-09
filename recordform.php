@@ -241,7 +241,7 @@ include ('includes/header.html');
 		<br>
 		<content>
 
-			<b><u>LET OP: Deze pagina is nog niet in gebruik. Het invullen van dit formulier zal geen officiële aanvraag zijn.<br>
+			<b><u>LET OP: Deze pagina is nog niet in gebruik. Het invullen van dit formulier zal geen officiele aanvraag zijn.<br>
 			Deze pagina wordt nog gebruikt om te testen.<br><br></u></b>
 
 			Vul onderstaand formulier alstublieft volledig en juist in. </br>
@@ -472,7 +472,6 @@ include ('includes/header.html');
  	      			<td><input name='misc".$i."' type='text'></td></tr>";
  	      		}
 						?>
-						<tr><th colspan="2">Totaal aantal punten</th><td class='meerkamp'><input name='total' type='text'></td></tr>
 					</table>
 				</td>
 			</tr>

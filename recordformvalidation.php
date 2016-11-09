@@ -147,7 +147,6 @@ if ($_POST['ground'] == 'Baan' || $_POST['ground'] == 'Indoor'){
 			$meerkamp["points".$i] = $_POST["points".$i];
 			$meerkamp["misc".$i] = $_POST["misc".$i];
 		}
-			$meerkamp["total"] = $_POST['total']
 	}
 }
 

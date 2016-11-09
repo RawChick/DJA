@@ -124,6 +124,7 @@ if(isset($_SESSION['basedocinfo']) && isset($_SESSION['typedocinfo']) && isset($
 		$table->addCell(2100, $styleCell)->addText('Punten', $fontStyleFirstRow);
 		$table->addCell(2100, $styleCell)->addText('Gewicht/windmeting', $fontStyleFirstRow);
 
+		
 		// Add more rows / cells
 		for($i = 0; $i < 10; $i++){
 			if( isset($meerkamp["segment".$i]) && $meerkamp["segment".$i] != "" && !is_null($meerkamp["segment".$i])){
@@ -133,12 +134,15 @@ if(isset($_SESSION['basedocinfo']) && isset($_SESSION['typedocinfo']) && isset($
 				$table->addCell(2100)->addText($meerkamp["performance".$i]);
 				$table->addCell(2100)->addText($meerkamp["points".$i]);
 				$table->addCell(2100)->addText($meerkamp["misc".$i]);
+				$total = $total + $meerkamp["points".$i];
 			}
 		}
-			$table->addRow();
-			$table->addCell(2100, $styleCell)->addText('Totaal aantal punten', $fontStyleFirstRow);
-			$table->addCell(2100, $styleCell)->addText($meerkamp["total"]);
+		$typetable->addRow();
+		
+			$typetable->addCell(3500)->addText('Totaal aantal punten', 'keyFont');
+			$typetable->addCell(3500)->addText($total, 'normalFont');
 	}
+
 
 	$section->addTextBreak();
 

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>De Jonge Athleet</title>
+	<!-- utf-8   ISO-8859-1 -->
+	<style type="text/css" media="all">
+	@import "includes/mainstyle2.css";
+	@import "includes/widgEditor.css";
+	</style>
+	<!-- <link rel="stylesheet" href="includes/mainstyle.css" type="text/css" /> -->
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript" src="scripts/widgEditor.js"></script>
+<?php
+include 'includes/sponsorbarleft.php';
+include 'includes/sponsorbarright.php';
+?>
+
+<div class="main">
+
+	<div class="banner">
+	<a href="index.php"><img src="images/banner.png"></a>
+</div>
+
+<?php
+error_reporting( E_ALL ); 
+ini_set('log_errors', '1'); 
+// dirname of __FILE__ is this directory 
+ini_set("error_log \n", dirname(__FILE__).'/_phperror.log');  
+
+include 'php/connection.php';
+
+// Connect to the database
+$mysqli = new MySQLi($host,$user,$password,$database);
+
+?>
+
+
+<div class="navigation">
+<label for="show-menu" class="show-menu"> Menu <img width="30px" src="images/menu.png"> </label>
+	<input type="checkbox" id="show-menu" role="button">
+		<ul id="menu">
+		<li><a href="index.php"><b>Home</b></a></li>
+		<li>
+			<a href="#"><b>Vereniging &#8595;</b></a>
+			<ul class="hidden">
+				<li><a href="overdja.php">Over DJA</a></li>
+				<li><a href="fotoalbum.php">Fotoalbum</a></li>
+				<li><a href="bestuur.php">Bestuur</a></li>
+				<li><a href="geschiedenis.php">Geschiedenis</a></li>
+				<li><a href="accommodatie.php">Accommodatie</a></li>
+				
+			</ul>
+		</li>
+		<li>
+			<a href="#"><b>Trainen bij &#8595;</b></a>
+			<ul class="hidden">
+				<li><a href="lidmaatschap.php">Lidmaatschap</a></li>
+				<li><a href="categorie.php">Categorie indeling</a></li>
+				<li><a href="algemeneinfo.php">Algemene info</a></li>
+				<li><a href="vacatures.php">Vacatures</a></li>
+				<li><a href="kleding.php">Kleding</a></li>
+			</ul>
+		</li>
+		<li><a href="#"><b>Wedstrijden &#8595;</b></a>
+		<ul class="hidden">
+				<li><a href="verslagen.php">Verslagen</a></li>
+				<li><a href="kalender.php">Kalender</a></li>
+				<li><a href="wedstrijdregels.php">Regels</a></li>
+				<li><a href="archief.php">Archief</a></li>
+			</ul>
+		</li>
+		<li><a href="#"><b>Overig &#8595;</b></a>
+		<ul class="hidden">
+				<li><a href="links.php">Links</a></li>
+				<li><a href="sponsors.php">Sponsors</a></li>
+				<li><a href="downloads.php">Downloads</a></li>
+				<li><a href="inloggen.php">Account</a></li>
+		</ul>
+		</li>
+
+
+	</ul>
+		
+	</div>
+</div>
+	</head>
+
+<body  onload="runSlideShow()"> 
+
