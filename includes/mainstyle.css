@@ -320,10 +320,8 @@ input[type=checkbox]:checked ~ #menu{
 	background: #FFFFFF url(images/bg01.png) repeat;
 	opacity: 0.95;
 	float: left;
-	width: 94%;
+	min-width: 80%;
 	padding: 5% 5%;
-	min-height: 400px;
-	
 }
 
 .mainbar img {
@@ -404,7 +402,6 @@ position: relative;
 .bottomcontent {
 overflow: scroll;
 line-height:25px;
-padding: 1%;
 margin: 0 0 12px 0;
 opacity: 0.90;
 }
