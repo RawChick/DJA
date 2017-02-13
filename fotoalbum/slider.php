@@ -13,20 +13,16 @@ $(window).load(function() {
   $(".loader").fadeOut("slow");
 })
 </script>
-
-
 </head>
-
-
-<div class= "bottomcontent">
-
-        <article class="mainbar"> 
-
+<div class= "contentfotoalbum">
+        <article class="mainbarfotoalbum"> 
 <div class="loader"></div>
+ <?php 
 
- <?php echo"         
+$album = $_GET['id'];
+        echo"         
           <header>
-            <h2><b>".$_GET['id']."</b></h2>
+            <h2><b>".$album."</b></h2>
           </header>";
  if (!isset($_GET['id']))
 {
@@ -35,12 +31,12 @@ $(window).load(function() {
 } else {
 
 $link = mysqli_connect($host, $user, $password, $database);
-$sql = "SELECT paths, category FROM photoalbum WHERE category = '".$_GET['id']."'";
+$sql = "SELECT paths, category FROM photoalbum WHERE category = '".$album."'";
 $result = mysqli_query($link, $sql);
 
 ?>
 
-<b><a href="../fotoalbum.php">Terug naar overzicht</a></b></br></br>
+<b><a href="../fotoalbum.php">Terug naar overzicht</a></b></br>
 <div class="fotoalbum">
 
 	<div id="main" role="main">
@@ -50,7 +46,13 @@ $result = mysqli_query($link, $sql);
 
 <?php 
            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-             echo "<li><img src='images/".$row['paths']."'/></li>";
+              if(substr($row['paths'], 0, 4) == 'http'){
+                echo "<li><img src='".$row['paths']."'/></li>";  
+              } elseif (substr($row['paths'], 0, 8) == 'plupload'){
+                echo "<li><img src='../".$row['paths']."'/></li>";
+              } else {
+                echo "<li><img src='images/".$row['paths']."'/></li>";
+              }
            }
 ?>
           </ul>

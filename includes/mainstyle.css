@@ -324,6 +324,13 @@ input[type=checkbox]:checked ~ #menu{
 	padding: 5%;
 }
 
+.mainbarfotoalbum {
+	background: #FFFFFF url(images/bg01.png) repeat;
+	float: left;
+	min-width: 80%;
+	padding: 5%;
+}
+
 .mainbar img {
 	opacity: 1.0;
 }
@@ -405,6 +412,13 @@ margin: 0 0 12px 0;
 opacity: 0.90;
 background: #FFFFFF url(images/bg01.png) repeat;
 overflow: scroll;
+}
+
+.contentfotoalbum {
+line-height:25px;
+margin: 0 0 12px 0;
+background: #FFFFFF url(images/bg01.png) repeat;
+overflow: scroll;	
 }
 
 .fotoalbum {

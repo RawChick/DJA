@@ -106,9 +106,13 @@ html[xmlns] .flexslider .slides {
 .flexslider .slides {
   zoom: 1;
 }
+
+.bottomcontent {
+  line-height: 50px;
+}
 .flexslider .slides img {
 width: auto; /* undo width: 100%  in flexslider.css*/
-max-width:100%;  /* Make sure the image stays inside its surrounding container. */
+max-width:95%;  /* Make sure the image stays inside its surrounding container. */
 height: auto; 
 }
 .flex-viewport {

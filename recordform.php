@@ -8,24 +8,32 @@
 	  document.getElementById("ageCategoryM").style.display="none";
 	  document.getElementById("wegDistance").style.display="none";
     document.getElementById("wegChip").style.display="none";
-    document.getElementById("wegTime").style.display="none";
+    document.getElementById("wegTimeBruto").style.display="none";
+    document.getElementById("wegTimeNetto").style.display="none";
 	  document.getElementById("typesubI").style.display="none";   
 	  document.getElementById("typesubB").style.display="none";   
 		document.getElementById("jumpSegment").style.display="none";
-		document.getElementById("throwSegment").style.display="none";
+		document.getElementById("throwSegmentI").style.display="none";
+		document.getElementById("throwSegmentB").style.display="none";
 		document.getElementById("throwWeightKilo").style.display="none";
 		document.getElementById("throwWeightGram").style.display="none";
 		document.getElementById("distance").style.display="none";
 		document.getElementById("jumpHeight").style.display="none";
 		document.getElementById("heightHindernis").style.display="none";
 		document.getElementById("electroTime").style.display="none";
-		document.getElementById("windMeting").style.display="none";
+		document.getElementById("windmeter").style.display="none";
 		document.getElementById("windSpeed").style.display="none";
 		document.getElementById("waterBak").style.display="none";
 		document.getElementById("finishTime").style.display="none";
 		document.getElementById("endInfo").style.display="none";
 		toggleBottom("none");
 		toggleMeerkamp("none");
+	}
+
+	function addJumpSegment(){
+		var option = document.createElement('option');
+		option.text = option.value = "Hinkstapspringen";
+		document.getElementById("jumpSegments").add(option, 2);
 	}
 
 	function createRequired(x){
@@ -45,15 +53,15 @@
 	function checkWindMeting(d){
 		var g = document.getElementById("ground");
 		var ground = g.options[g.selectedIndex].value;
-		var ib = document.getElementById("typesubB");
-		var typeonderdeel = ib.options[ib.selectedIndex].value;
 		if(ground == 'Baan'){
+		var ib = document.getElementById("typesubBaan");
+		var typeonderdeel = ib.options[ib.selectedIndex].value;
 			if(typeonderdeel == 'Lopen' || typeonderdeel == 'Horden'){
 				if(d.value < 201 && d.value >= 0){
-					document.getElementById("windMeting").style.display="table-row";
-				} else {document.getElementById("windMeting").style.display="none";}
-			} else {document.getElementById("windMeting").style.display="none";}
-		} else {document.getElementById("windMeting").style.display="none";}
+					document.getElementById("windmeter").style.display="table-row";
+				} else {document.getElementById("windmeter").style.display="none";}
+			} else {document.getElementById("windmeter").style.display="none";}
+		} else {document.getElementById("windmeter").style.display="none";}
 	}
 
 	function hola(x) {
@@ -85,10 +93,9 @@
 	   	hideTypeSub();
 	    document.getElementById("wegDistance").style.display="table-row";
 	    document.getElementById("wegChip").style.display="table-row";
-	    document.getElementById("wegTime").style.display="table-row";
+	    document.getElementById("wegTimeBruto").style.display="table-row";
 	    toggleBottom("table-row");
 		}
-
 
 	  if(x.value == "Ja"){
 	  	document.getElementById("windSpeed").style.display="table-row";
@@ -97,23 +104,43 @@
 	  	document.getElementById("windSpeed").style.display="none"; 
 	  }
 
-		if(x.value == 'Indoor')  {
+		if(x.value == 'Indoor' || x.value == 'Baan')  {
 			toggleBottom("none");
 	   	document.getElementById("wegDistance").style.display="none";
 	    document.getElementById("wegChip").style.display="none";
-	    document.getElementById("wegTime").style.display="none";
-	    document.getElementById("typesubI").style.display="table-row";
-	    document.getElementById("typesubB").style.display="none";
-	  }
+		document.getElementById("wegTimeBruto").style.display="none";
+   		document.getElementById("wegTimeNetto").style.display="none";
 
-	  if(x.value == 'Baan'){
-	  	toggleBottom("none");
-	  	document.getElementById("wegDistance").style.display="none";
-	    document.getElementById("wegChip").style.display="none";
-	    document.getElementById("wegTime").style.display="none";
-	  	document.getElementById("typesubI").style.display="none";
-	  	document.getElementById("typesubB").style.display="table-row";
-	  }
+		  if(x.value == 'Baan'){
+		  	document.getElementById("typesubI").style.display="none";
+		  	document.getElementById("typesubB").style.display="table-row";
+		  	var typesub = document.getElementById("typesubsB")
+		  	var werpen = "WerpenB";
+		  }
+		  if(x.value == 'Indoor'){
+		  	document.getElementById("typesubI").style.display="table-row";
+		  	document.getElementById("typesubB").style.display="none";
+		  	var typesub = document.getElementById("typesubsI");
+		  	var werpen = "WerpenI";
+		  }
+
+		  var gender = document.querySelector('input[name="gender"]:checked').value;
+	  	if(gender == 'Man'){
+				var g = document.getElementById("categoriesM");
+				var categoryG = g.options[g.selectedIndex].value;
+				var masters = "Masters mannen";
+	  	} else if(gender == 'Vrouw'){
+	  		var g = document.getElementById("categoriesF");
+				var categoryG = g.options[g.selectedIndex].value;
+				var masters = "Masters vrouwen";
+	  	}
+			if(categoryG == masters){
+				var option = document.createElement('option');
+				option.text = "Werpen";
+				option.value = werpen;
+				typesub.add(option, 2);
+	  	}
+		}
 
 	}
 
@@ -146,12 +173,29 @@
 	  }
 
 	  if(x.value == 'Springen'){
-	  	document.getElementById("jumpSegment").style.display="table-row";
+	  	var jumpSegments = document.getElementById("jumpSegments");
+	  	var gender = document.querySelector('input[name="gender"]:checked').value;
+	  	if(gender == 'Man'){
+				var g = document.getElementById("categoriesM");
+				var categoryG = g.options[g.selectedIndex].value;
+				var dJunioren = "D-junioren jongens";
+	  	} else if(gender == 'Vrouw'){
+	  		var g = document.getElementById("categoriesF");
+				var categoryG = g.options[g.selectedIndex].value;
+				var dJunioren = "D-junioren meisjes";
+	  	}
+			if(categoryG != dJunioren){
+		  	addJumpSegment();
+		  }
+			document.getElementById("jumpSegment").style.display="table-row";
 	  }
 
-	  if(x.value == 'Werpen'){
-	  	document.getElementById("throwSegment").style.display="table-row";
-	  }
+		if(x.value == 'WerpenI'){
+			document.getElementById("throwSegmentI").style.display="table-row";		
+		}
+		if(x.value == 'WerpenB'){
+			document.getElementById("throwSegmentB").style.display="table-row";
+		}
 
 	  if(x.value == 'Meerkamp'){
 	  	toggleMeerkamp("table-row");
@@ -163,7 +207,8 @@
 		  document.getElementById("throwWeightKilo").style.display="none";
 			document.getElementById("throwWeightGram").style.display="none";
 			document.getElementById("jumpHeight").style.display="none";
-			document.getElementById("throwSegment").style.display="none";
+			document.getElementById("throwSegmentI").style.display="none";
+			document.getElementById("throwSegmentB").style.display="none";
 	  	document.getElementById("jumpSegment").style.display="none";
 	  	document.getElementById("heightHindernis").style.display="none";
 	  	document.getElementById("electroTime").style.display="none";
@@ -171,7 +216,7 @@
 	  	document.getElementById("finishTime").style.display="none";
 	  	document.getElementById("distance").style.display="none";
 	  	document.getElementById("windSpeed").style.display="none"; 
-	  	document.getElementById("windMeting").style.display="none";
+	  	document.getElementById("windmeter").style.display="none";
 	  	toggleBottom("none");
 	  	toggleMeerkamp("none");
 	}
@@ -209,6 +254,16 @@
 		document.getElementById("linkList").style.display=x;
 		document.getElementById("dateNow").style.display=x;
 		document.getElementById("submit").style.display=x;
+		document.getElementById("captcha").style.display=x;
+	}
+
+	function toggleChip(x){
+		if(x.value == 'Ja'){
+    	document.getElementById("wegTimeNetto").style.display="table-row";
+		}
+		if(x.value == 'Nee'){
+		document.getElementById("wegTimeNetto").style.display="none";
+		}
 	}
 
 var timeOut;
@@ -244,12 +299,12 @@ include ('includes/header.html');
 			<b><u>LET OP: Deze pagina is nog niet in gebruik. Het invullen van dit formulier zal geen officiele aanvraag zijn.<br>
 			Deze pagina wordt nog gebruikt om te testen.<br><br></u></b>
 
-			Vul onderstaand formulier alstublieft volledig en juist in. </br>
-  		Er dient een uitslagenlijst bijgevoegd te worden. Deze kunt u onderaan het formulier als link toevoegen.</br>
+			Vul onderstaand formulier alstublieft volledig en juist in. <br>
+  		Er dient een uitslagenlijst bijgevoegd te worden. Deze kunt u onderaan het formulier als link toevoegen.<br>
   		Heeft u geen link? Mail het dan alstublieft naar <a href="mailto:dja.clubrecords@gmail.com">dja.clubrecords@gmail.com</a>,
   		met uw naam en datum van opsturen erin.<br>
-			Lees <b><a href="pdf/Richtlijnen CLUBRECORDS DJA, aangepast 25 juli 2016.pdf" target="_blank">hier</a></b> voor de richtlijnen van de clubrecords (versie juli 2016)</br>
-			<br>
+			Lees <b><a href="pdf/Richtlijnen CLUBRECORDS DJA, aangepast 25 juli 2016.pdf" target="_blank">hier</a></b> voor de richtlijnen van de clubrecords (versie juli 2016)<br>
+			<br><p style="color: #FF0000"><b>INLEVEREN BINNEN 2 MAANDEN NA DATUM WEDSTRIJD</b></p>
 			Dit formulier maakt gebruik van Javascript. Het formulier klapt uit naarmate u deze verder invult.<br>
 			Als u alles heeft ingevuld, zal er onderaan een "verstuur" knop verschijnen.<br>
 			Mocht dit niet lukken, download dan het formulier <b><a href="downloads/clubrecordformulier.docx" >hier</a></b>,
@@ -284,7 +339,7 @@ include ('includes/header.html');
 
 		  		<tr id='categoryF'>
 		  			<td>Categorie</td>
-		  			<td><select name = "categoryF" onchange="hola(this);"> 
+		  			<td><select name = "categoryF" id="categoriesF" onchange="hola(this);"> 
 				    <option selected = "selected" value ="standard">Selecteer..</option>
 				    <option value = "D-junioren meisjes">D-junioren meisjes</option>
 				    <option value = "C-junioren meisjes">C-junioren meisjes</option>
@@ -297,7 +352,7 @@ include ('includes/header.html');
 
 					<tr id='categoryM'>
 						<td>Categorie</td>
-						<td><select name = "categoryM" onchange="hola(this);"> 
+						<td><select name = "categoryM" id="categoriesM" onchange="hola(this);"> 
 					    <option selected = "selected" value="standard">Selecteer..</option>
 					    <option value = "D-junioren jongens">D-junioren jongens</option>
 					    <option value = "C-junioren jongens">C-junioren jongens</option>
@@ -348,53 +403,63 @@ include ('includes/header.html');
 	      		<td>Afstand</td>
 	          <td><input name="wegDistance" type="text"> meter</td>
 	        </tr>
+ 	      	<tr id="wegTimeBruto">	
+ 	      		<td>Gelopen tijd (bruto)</td>
+	          <td><input name= "wegTimeBruto" type="text"> mm:ss</td>
+	        </tr>
 	        <tr id="wegChip">
-	          <td>Chip tijdwaarneming?</td>
-						<td><input type="radio" name="wegChip" value="Ja"> Ja
-				  	<input type="radio" name="wegChip" value="Nee"> Nee </td>
- 	      	</tr>
- 	      	<tr id="wegTime">	
- 	      		<td>Gelopen tijd</td>
-	          <td><input name= "wegTime" type="text"></td>
+	          <td>Chip tijdswaarneming?</td>
+				<td><input type="radio" name="wegChip" onclick="toggleChip(this);" value="Ja"> Ja
+				<input type="radio" name="wegChip" onclick="toggleChip(this);" value="Nee"> Nee </td>
+			</tr>
+			<tr id="wegTimeNetto">	
+ 	      		<td>Gelopen tijd (netto)</td>
+	          <td><input name= "wegTimeNetto" type="text"> mm:ss</td>
 	        </tr>
 
 	        <tr id="typesubI">
 	      		<td>Type onderdeel</td>
-	          <td><select id="typesubI" name = "typesubI" onchange="viewTypeSub(this);"> 
+	          <td><select id="typesubsI" name = "typesubI" onchange="viewTypeSub(this);"> 
 					    <option selected = "selected" value = "standard">Selecteer..</option>
 					    <option value = "Lopen">Lopen</option>
 					    <option value = "Springen">Springen</option>
-					    <option value = "Werpen">Werpen</option>
 					    <option value = "Horden">Horden</option>
 					    <option value = "Meerkamp">Meerkamp</option>
 						</select></td>
 	        </tr>
 	        <tr id="typesubB">
 	      		<td>Type onderdeel</td>
-	          <td><select id="typesubB" name = "typesubB" onchange="viewTypeSub(this);"> 
+	          <td><select id="typesubsB" name = "typesubBaan" onchange="viewTypeSub(this);"> 
 					    <option selected = "selected" value = "standard">Selecteer..</option>
 					    <option value = "Lopen">Lopen</option>
 					    <option value = "Springen">Springen</option>
-					    <option value = "Werpen">Werpen</option>
 					    <option value = "Horden">Horden</option>
 					    <option value = "Steeplechase">Steeplechase</option>
 					    <option value = "Meerkamp">Meerkamp</option>
 						</select></td>
 	        </tr>
 	        <tr id="jumpSegment">
+
 	        	<td>Onderdeel</td>
-	        	<td><select name = "jumpSegment" onchange="holaJump(this);"> 
+	        	<td><select name = "jumpSegment" id = "jumpSegments" onchange="holaJump(this);"> 
 					    <option selected = "selected" value = "standard">Selecteer..</option>
 					    <option value = "Verspringen">Verspringen</option>
 					    <option value = "Hoogspringen">Hoogspringen</option>
-					    <option value = "Hinkstapspringen">Hinkstapspringen</option>
 					    <option value = "Polsstokhoogspringen">Polsstokhoogspringen</option>
 						</select></td>
 	        </tr>
 
-					<tr id="throwSegment">
+					<tr id="throwSegmentI">
 	        	<td>Onderdeel</td>
-	        	<td><select name = "throwSegment" onchange="holaThrow(this);"> 
+	        	<td><select name = "throwSegmentI" onchange="holaThrow(this);"> 
+					    <option selected = "selected" value = "standard">Selecteer..</option>
+					    <option value = "Kogelstoten">Kogelstoten</option>
+						</select></td>
+	        </tr>	        
+
+					<tr id="throwSegmentB">
+	        	<td>Onderdeel</td>
+	        	<td><select name = "throwSegmentB" onchange="holaThrow(this);"> 
 					    <option selected = "selected" value = "standard">Selecteer..</option>
 					    <option value = "Kogelstoten">Kogelstoten</option>
 					    <option value = "Discuswerpen">Discuswerpen</option>
@@ -402,7 +467,7 @@ include ('includes/header.html');
 					    <option value = "Kogelslingeren">Kogelslingeren</option>
 					    <option value = "Gewichtwerpen">Gewichtwerpen</option>
 						</select></td>
-	        </tr>	        
+	        </tr>	
 
 	        <tr id="throwWeightKilo">
 	        	<td>Gewicht werpmateriaal</td>
@@ -438,14 +503,14 @@ include ('includes/header.html');
 				  	<input type="radio" name="electroTime" value="Nee"> Nee </td>
  	      	</tr>
 
- 	      	<tr id="windMeting">
+ 	      	<tr id="windmeter">
  	      		<td>Windmeting aanwezig?</td>
  	      		<td><input type="radio" name="windmeter" onclick="hola(this);" value="Ja"> Ja
 				  	<input type="radio" name="windmeter" onclick="hola(this);" value="Nee"> Nee </td>
  	      	</tr>
 
  	      	<tr id="windSpeed">
- 	      		<td>Gemeten wind</td>
+ 	      		<td>Windsnelheid</td>
  	      		<td><input name = "windSpeed" type="text"> m/s</td>
  	      	</tr>
 
@@ -457,24 +522,26 @@ include ('includes/header.html');
 
  	      	<tr id="finishTime">
  	      		<td>Gelopen tijd</td>
- 	      		<td><input name= "finishTime" type="text"></td>
+ 	      		<td><input name= "finishTime" type="text"> mm:ss</td>
  	      	</tr>	
 
  	      	<tr id ="meerkampTable">
- 	      	<td colspan="3">
- 	      	<table border="1" width="100%" class="meerkamp">
- 	      	<tr id="meerkampTitle"><th>Onderdeel</th><th>Prestatie</th><th>Punten</th><th>Gewicht/windmeting</th></tr>
-						<?php
-						for($i=0; $i < 10; $i++){
- 	      		echo"<tr id='meerkampRow".$i."'><td><input name='segment".$i."' type='text' placeholder='Vul hier onderdeel ".($i+1)." in..'></td>
- 	      			<td><input name='performance".$i."' type='text'></td>
- 	      			<td><input name='points".$i."' type='text'></td>
- 	      			<td><input name='misc".$i."' type='text'></td></tr>";
- 	      		}
-						?>
-					</table>
-				</td>
-			</tr>
+ 	      		<td colspan="3">
+ 	      			<p style="color: #FF0000">Bij 'overige informatie' moet extra informatie ingevuld worden afhankelijk van het ingevulde onderdeel.
+ 	      			<br>Bijvoorbeeld: Afstand, hordenhoogte, gewicht werpmateriaal of windsnelheid.</p>
+ 	      			<table border="1" width="100%" class="meerkamp">
+		 	      	<tr id="meerkampTitle"><th>Onderdeel</th><th>Prestatie</th><th>Punten</th><th>Overige informatie</th></tr>
+								<?php
+								for($i=0; $i < 10; $i++){
+		 	      		echo"<tr id='meerkampRow".$i."'><td><input name='segment".$i."' type='text' placeholder='Vul hier onderdeel ".($i+1)." in..'></td>
+		 	      			<td><input name='performance".$i."' type='text'></td>
+		 	      			<td><input name='points".$i."' type='text'></td>
+		 	      			<td><input name='misc".$i."' type='text'></td></tr>";
+		 	      		}
+								?>
+							</table>
+						</td>
+					</tr>
 
  	      	<tr id="endInfo"><td colspan="2"><b><u>Overige informatie geleverde prestatie</u></b></td></tr>
 
@@ -500,9 +567,17 @@ include ('includes/header.html');
 
  	      	<tr id="dateNow">
  	      		<td>Datum aanvraag clubrecord</td>
- 	      		<td><input name="dateNow" type="text" value="<?php echo date('d-m-Y'); ?>"> dd-mm-jjjj</td>
- 	      	</tr>	      	
+ 	      		<td><input name="dateNow" type="text" value="<?php echo date("d-m-Y", strtotime("now")); ?>"> dd-mm-jjjj</td>
+ 	      	</tr>	     
 
+ 	      	<tr id="captcha"> 	
+ 	      		<td> Beveiligingscode</td>
+ 	      		<td><img id="captcha_img" src="/securimage/securimage_show.php" alt="CAPTCHA Image" />
+ 	      			<a href="#" onclick="document.getElementById('captcha_img').src = '/securimage/securimage_show.php?' + Math.random(); return false"> 
+ 	      				<img height="23px" src="images/refresh.png"></a><br><br>
+ 	      			<input type="text" name="captcha" size="20" maxlength="6" placeholder="Typ bovenstaande code.."/>
+						</td>
+					</tr>
  	      	<tr id="submit"><td><input type="submit" name="submit" value="Verstuur"></td></tr>
 
        	</table>
@@ -518,7 +593,7 @@ if(isset($_SESSION['required_list'])){
 
 	foreach($required AS $key => $value){
 		if($value == 'dateRecord' || $value =='vereniging' || 
-	$value == 'plaats' || $value == 'linkUitslagen' || $value == 'dateNow' || $value == 'Verstuur')continue;
+	$value == 'plaats' || $value == 'linkUitslagen' || $value == 'dateNow' || $value == 'Verstuur' || $value == 'Captcha')continue;
 		echo "<script> createRequired('".$value."'); </script>";
 	}
 

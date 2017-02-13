@@ -17,7 +17,7 @@ include ('php/connection.php');
 					<div class="outer">
 						<div class="inner">
 <a href="fotoalbum.php">
-<img src="images/slideshow/testje.jpg" name="SlideShow" alt="" border="0"  />
+<img src="" name="SlideShow" alt="" border="0"  />
 </a>	
 </div>
 </div>
