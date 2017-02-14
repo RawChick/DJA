@@ -3,9 +3,7 @@ session_start();
 include ('includes/header.html');
 
 ?>
-
-
-
+<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 <div class= "bottomcontent">
 
 				<article class="mainbar">	
@@ -78,7 +76,10 @@ if ($result === true) {
 					</li>
 					 <?php echo isset($aErrors['noise']) ? '<li class="error">' : '<li>' ?>
 					<label><big><b>Informatie</b></big></label>
-				<textarea id="noise" name="noise" class="widgEditor"></textarea>
+				<textarea id="noise" name="noise"></textarea>
+				<script type="text/javascript">
+					CKEDITOR.replace('noise');
+				</script>
 				</li>
 			
 				<input type="submit" value="Opslaan" />
