@@ -1,7 +1,5 @@
 <?php	
-
 include ('includes/header.html');
-
 ?>
 
 <div class= "bottomcontent">
@@ -40,7 +38,5 @@ include ('includes/header.html');
 </div>
 
 <?php	
-
 include ('includes/footer.html');
-
 ?>

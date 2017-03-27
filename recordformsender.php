@@ -62,9 +62,9 @@ if(isset($_SESSION['basedocinfo']) && isset($_SESSION['typedocinfo']) && isset($
 	$section = $word_doc->createSection($sectionStyle);
 	$section->addImage("images/Logo.jpg",array('width'=>90, 'height'=>82, 'align'=>'left'));
 
-	$word_doc->addFontStyle('titleFont', array('name'=>'Tahoma', 'size'=>13, 'underline' => PHPWord_Style_Font::UNDERLINE_SINGLE,'bold'=>true));
-	$word_doc->addFontStyle('normalFont', array('name'=>'Tahoma', 'size'=>11));
-	$word_doc->addFontStyle('keyFont', array('name'=>'Tahoma', 'size'=>11, 'bold'=>true));
+	$word_doc->addFontStyle('titleFont', array('name'=>'Tahoma', 'size'=>12, 'underline' => PHPWord_Style_Font::UNDERLINE_SINGLE,'bold'=>true));
+	$word_doc->addFontStyle('normalFont', array('name'=>'Tahoma', 'size'=>10));
+	$word_doc->addFontStyle('keyFont', array('name'=>'Tahoma', 'size'=>10, 'bold'=>true));
 	$word_doc->addFontStyle('smallFont', array('name'=>'Tahoma', 'size'=>9, 'bold'=>true));
 
 	$section->addText('Algemene gegevens', 'titleFont');
@@ -199,11 +199,11 @@ if(isset($_SESSION['basedocinfo']) && isset($_SESSION['typedocinfo']) && isset($
 	mail_message($my_replyto, $senders_mail, $senders_name, $my_subject, $my_message1, $my_path, 1);
 		
 	//naar DJA 
-	// $senders_mail vervangen met $dja_mail
-	mail_message($my_replyto, $senders_mail, $senders_name, $my_subject, $my_message2, $my_path, 0);
+	mail_message($my_replyto, $dja_mail, $senders_name, $my_subject, $my_message2, $my_path, 0);
 
 } else {
-	echo "Oei, er gaat iets fout...<br><br>";
+	echo "Er is helaas iets misgegaan, probeer het alstublieft opnieuw.<br>
+	<a href='www.dja-zundert.nl/recordform.php'><b>Ga terug naar formulier<b></a><br><br>";
 }
 ?>
 <a href="http://www.dja-zundert.nl"><b>Terug naar hoofdpagina</b></a>

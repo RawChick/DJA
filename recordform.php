@@ -51,11 +51,14 @@
 
 
 	function checkWindMeting(d){
+		console.log("d: " + d.value);
 		var g = document.getElementById("ground");
 		var ground = g.options[g.selectedIndex].value;
+		console.log("ground: " + ground);
 		if(ground == 'Baan'){
-		var ib = document.getElementById("typesubBaan");
+		var ib = document.getElementById("typesubsB");
 		var typeonderdeel = ib.options[ib.selectedIndex].value;
+		console.log("typeonderdeel: " + typeonderdeel);
 			if(typeonderdeel == 'Lopen' || typeonderdeel == 'Horden'){
 				if(d.value < 201 && d.value >= 0){
 					document.getElementById("windmeter").style.display="table-row";
@@ -146,7 +149,7 @@
 
 	function viewTypeSub(x){
 
-				hideTypeSub();
+		hideTypeSub();
 
 		  if(x.value == "Lopen"){
 	  	document.getElementById("distance").style.display="table-row";
@@ -173,20 +176,23 @@
 	  }
 
 	  if(x.value == 'Springen'){
-	  	var jumpSegments = document.getElementById("jumpSegments");
-	  	var gender = document.querySelector('input[name="gender"]:checked').value;
-	  	if(gender == 'Man'){
+	  	
+	  	if(document.getElementById("gender").checked){ 
+	  		var gender = document.querySelector('input[name="gender"]:checked').value;
+		  	if(gender == 'Man'){
 				var g = document.getElementById("categoriesM");
 				var categoryG = g.options[g.selectedIndex].value;
 				var dJunioren = "D-junioren jongens";
-	  	} else if(gender == 'Vrouw'){
-	  		var g = document.getElementById("categoriesF");
+		  	} else if(gender == 'Vrouw'){
+		  		var g = document.getElementById("categoriesF");
 				var categoryG = g.options[g.selectedIndex].value;
 				var dJunioren = "D-junioren meisjes";
-	  	}
-			if(categoryG != dJunioren){
+		  	}
+	  
+			if(categoryG && categoryG != dJunioren){
 		  	addJumpSegment();
 		  }
+		}
 			document.getElementById("jumpSegment").style.display="table-row";
 	  }
 
@@ -295,9 +301,6 @@ include ('includes/header.html');
 		</header>
 		<br>
 		<content>
-
-			<b><u>LET OP: Deze pagina is nog niet in gebruik. Het invullen van dit formulier zal geen officiele aanvraag zijn.<br>
-			Deze pagina wordt nog gebruikt om te testen.<br><br></u></b>
 
 			Vul onderstaand formulier alstublieft volledig en juist in. <br>
   		Er dient een uitslagenlijst bijgevoegd te worden. Deze kunt u onderaan het formulier als link toevoegen.<br>
