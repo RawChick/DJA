@@ -105,7 +105,7 @@
 			if(x.value == 'Baan'){
 				hide("typesubI");
 				show("typesubB");
-				var typesub = document.getElementById("typesubsB")
+				var typesub = document.getElementById("typesubsB");
 				var werpen = "WerpenB";
 				throwB(werpen, typesub);
 			}
@@ -165,9 +165,7 @@
 			toggleBottom("table-row");
 		}
 
-		if(x.value == 'Springen'){
-
-			if(document.getElementById("gender").checked){ 
+		if(x.value == 'Springen'){ 
 				var gender = document.querySelector('input[name="gender"]:checked').value;
 				if(gender == 'Man'){
 					var g = document.getElementById("categoriesM");
@@ -178,11 +176,9 @@
 					var categoryG = g.options[g.selectedIndex].value;
 					var dJunioren = "D-junioren meisjes";
 				}
-
 				if(categoryG && categoryG != dJunioren){
 					addJumpSegment();
 				}
-			}
 			show("jumpSegment");
 		}
 
@@ -190,6 +186,19 @@
 			show("throwSegmentI");
 		}
 		if(x.value == 'WerpenB'){
+				var gender = document.querySelector('input[name="gender"]:checked').value;
+				if(gender == 'Man'){
+					var g = document.getElementById("categoriesM");
+					var categoryG = g.options[g.selectedIndex].value;
+					var master = "Masters mannen";
+				} else if(gender == 'Vrouw'){
+					var g = document.getElementById("categoriesF");
+					var categoryG = g.options[g.selectedIndex].value;
+					var master = "Masters vrouwen";
+				}
+				if(categoryG && categoryG == master){
+					addMasterThrow();
+				}
 			show("throwSegmentB");
 		}
 
@@ -197,6 +206,15 @@
 			toggleMeerkamp("table-row");
 			toggleBottom("table-row");
 		}
+	}
+
+	function addMasterThrow(){
+		var option = document.createElement('option');
+		option.text = "Gewichtwerpen";
+		option.value = "Gewichtwerpen";
+		var typesub = document.getElementById("throwSegmentBaan");
+		typesub.add(option, 2);
+		addMasterThrow = function(){}; 
 	}
 
 	function hideTypeSub(){
@@ -316,8 +334,8 @@ include ('includes/header.html');
 
 					<tr id="gender">
 						<td>Geslacht</td>
-						<td><input type="radio" name="gender" onclick="hola(this);" value="Man"> Man
-							<input type="radio" name="gender" onclick="hola(this);" value="Vrouw"> Vrouw </td>
+						<td><input type="radio" id="gender" name="gender" onclick="hola(this);" value="Man"> Man
+							<input type="radio" id="gender" name="gender" onclick="hola(this);" value="Vrouw"> Vrouw </td>
 						</tr>
 
 
@@ -443,13 +461,12 @@ include ('includes/header.html');
 
 							<tr id="throwSegmentB">
 								<td>Onderdeel</td>
-								<td><select name = "throwSegmentB" onchange="holaThrow(this);"> 
+								<td><select id="throwSegmentBaan" name = "throwSegmentB" onchange="holaThrow(this);"> 
 									<option selected = "selected" value = "standard">Selecteer..</option>
 									<option value = "Kogelstoten">Kogelstoten</option>
 									<option value = "Discuswerpen">Discuswerpen</option>
 									<option value = "Speerwerpen">Speerwerpen</option>
 									<option value = "Kogelslingeren">Kogelslingeren</option>
-									<option value = "Gewichtwerpen">Gewichtwerpen</option>
 								</select></td>
 							</tr>	
 
